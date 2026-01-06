@@ -1,8 +1,19 @@
 *{
     margin: 0;
 }
-header{
+body{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+/* header */
+#frame1{
     background-image: url(../images/banner/banner1.png);
+}
+#frame2{
+    background-image: url(../images/banner/banner2.png);
+}
+#frame3{
+    background-image: url(../images/banner/banner3.png);
 }
 header .heading{
     display: flex;
@@ -29,14 +40,27 @@ header .heading .text .button{
     display: flex;
     justify-content: flex-end;
 }
+.frame3 #bg-white{
+    color: white;
+}
 .btn{
     font-size: 20px;
+    font-weight: 600;
     padding: 20px 25px;
     background-color: #F15B22;
     color: #ffffff;
     border: none;
     border-radius: 5px;
 }
+.frame3 .white-btn{
+    color: #005FAC;
+    background-color: #fff; 
+}
+.frame3 #blue-btn{
+    background-color: #005FAC;
+    color: #fff; 
+}
+
 .failure-box .failure{
     display: flex;
     gap: 90px;
@@ -92,13 +116,21 @@ header .heading .text .button{
     font-size: 25px;
     color: #737272;
 }
-.plan .contact{
+/* Gradient color bg */
+.plan #gradient1{
+    background: url(../images/gradient1.png), url(../images/watch.png);
+}
+.plan #gradient2{
     background: url(../images/gradient2.png), url(../images/watch.png);
+}
+.plan #gradient3{
+    background: url(../images/gradient3.png), url(../images/watch.png);
+}
+.plan .contact{
     background-position: absolute;
     z-index: 1, 2;
     border: none;
     border-radius: 10px;
-    
 }
 .plan .contact .mindset{
     padding: 60px;
@@ -135,6 +167,7 @@ footer .subscribe{
 }
 .subscribe .form h4{
     font-size: 25px;
+    font-weight: 600;
     color: #ffffff;
     margin-bottom: 30px;
 }
