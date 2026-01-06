@@ -40,9 +40,11 @@ header .heading .text .button{
     display: flex;
     justify-content: flex-end;
 }
+/* Frame3 Header Background Color Fixing */
 .frame3 #bg-white{
     color: white;
 }
+/* all button  */
 .btn{
     font-size: 20px;
     font-weight: 600;
@@ -85,7 +87,6 @@ header .heading .text .button{
     list-style-type: none;
 }
 .failure .content ul{
-    margin-left: 0;
     padding-left: 0;
 }
 
@@ -129,7 +130,6 @@ header .heading .text .button{
 }
 .plan .contact{
     background-position: absolute;
-    z-index: 1, 2;
     border: none;
     border-radius: 10px;
 }
