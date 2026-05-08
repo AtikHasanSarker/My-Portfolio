@@ -1,15 +1,34 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // className =
+  //   "flex justify-between rounded-2xl w-full bg-[#f1f1f11a] lg:w-[70%] mx-auto p-4 items-center backdrop-blur";
 
   return (
     <header id="home" className="w-11/12 mx-auto pt-8 sticky top-0 z-50">
-      <nav className="flex justify-between bg-[#f1f1f11a] rounded-2xl w-full lg:w-[70%] mx-auto p-4 items-center backdrop-blur">
+      <nav
+        className={`flex justify-between rounded-2xl w-full lg:w-[70%] mx-auto p-4 items-center backdrop-blur
+      ${scrolled && "bg-[#f1f1f11a]"}`}
+      >
         <div className="flex gap-2 items-center">
           <Image
             width={100}
@@ -59,18 +78,23 @@ export default function Navbar() {
               <Link
                 key={item}
                 href={`#${item === "Home" ? "hero" : item.toLowerCase()}`}
-                className="relative group font-medium transition-all duration-300 hover:bg-linear-to-r hover:from-[#3B82F6] hover:to-[#06B6D4] hover:bg-clip-text hover:text-transparent"
+                className="relative group font-medium transition-all duration-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:bg-clip-text hover:text-transparent"
               >
                 {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-[#3B82F6] to-[#06B6D4] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-violet-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ),
           )}
         </div>
         <div className="hidden md:flex">
-          <Button className="bg-linear-to-r from-violet-400 to-pink-500">
-            Hire Me
-          </Button>
+          <Link href="https://www.linkedin.com/in/atik-hasan-sarker/" target="_blank">
+            <Button
+              className="bg-linear-to-r from-violet-400 to-pink-500 hover:scale-105 transition-all duration-300"
+              size="lg"
+            >
+              Hire Me
+            </Button>
+          </Link>
         </div>
 
         {isMenuOpen && (

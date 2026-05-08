@@ -16,10 +16,13 @@ export default function About() {
             Let’s see that
           </h3>
         </div>
-        <p className="text-[20px] md:text-2xl text-justify md:text-center">
-          Web developper, with extensive knowledge and years of experiences,
-          working in web technologies and UU/UX Design, Delivering quality
-          work.
+        <p className="text-[20px] md:text-2xl text-justify">
+          I’m a passionate frontend developer focused on building modern,
+          interactive, and immersive digital experiences. I enjoy blending clean
+          code with creative design to create smooth, responsive, and visually
+          engaging interfaces. My goal is to craft websites that not only
+          function perfectly but also leave a memorable experience for users
+          through thoughtful animations, modern UI, and attention to detail.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-between">
           <div className="p-6 bg-violet-950 rounded-xl">

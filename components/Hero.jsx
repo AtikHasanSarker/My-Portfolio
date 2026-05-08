@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
@@ -7,7 +8,13 @@ export default function Hero() {
 
   useEffect(() => {
     const typed = new Typed(typingRef.current, {
-      strings: ["~ Frontend Developer ~", "~ React Developer ~", "~ UI Developer ~"],
+      strings: [
+        "~ Frontend Developer ~",
+        "~ React Developer ~",
+        "~ Next.js Developer ~",
+        "~ Backend Developer ~",
+        "~ Express.js Developer ~",
+      ],
       typeSpeed: 80,
       backSpeed: 50,
       loop: true,
@@ -22,16 +29,18 @@ export default function Hero() {
     <section id="hero" className="w-10/12 lg:w-9/12 mx-auto mt-[50px] md:mt-[120px]">
       <div>
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
-          <img
+          <Image
             src="/assets/atik.jpg"
             className="rounded-full shadow-2xl flex-1 max-w-[250px]"
             alt="Atik Hasan"
+            width={250}
+            height={250}
           />
           <div className="flex-1">
             <h1 className="font-bold text-5xl md:text-6xl">
               Hi, I&apos;m{" "}
 
-              <span className="bg-gradient-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                 Atik Hasan
               </span>
 
@@ -40,7 +49,7 @@ export default function Hero() {
               Frontend Web Developer
             </h3>
             <p>
-              <span ref={typingRef}></span>
+              <span className="text-xl" ref={typingRef}></span>
             </p>
           </div>
         </div>

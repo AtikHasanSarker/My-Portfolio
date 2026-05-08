@@ -22,7 +22,7 @@ export default function IntroLoader() {
       }`}
     >
       <div className="text-center">
-        <h1 className="bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-7xl font-black text-transparent">
+        <h1 className="bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-6xl font-black text-transparent">
           {"<Atik Hasan Sarker />"}
         </h1>
 
@@ -31,7 +31,7 @@ export default function IntroLoader() {
         </div>
 
         <p className="mt-8 text-sm tracking-[8px] text-white/70 uppercase">
-          Mixing Liquid Experiences
+          Turning Ideas Into Interfaces
         </p>
       </div>
     </div>
