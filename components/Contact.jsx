@@ -1,13 +1,13 @@
 export default function Contact() {
   return (
-    <section id="contact" className="mt-[80px] md:mt-[120px]">
+    <section id="contact" className="mt-20">
       <h2 className="text-5xl font-bold text-center mb-20">
         Contact{" "}
-        <span className="bg-gradient-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
           Me
         </span>
       </h2>
-      <div className="w-10/12 mx-auto text-center border border-[#8d8d8d64] bg-[#3f40437d] bg-blend-saturation rounded-2xl p-6">
+      <div className="w-10/12 mx-auto text-center border border-[#8d8d8d3f] bg-[#242e4e5e] bg-blend-saturation rounded-2xl p-6">
         <div>
           <p className="text-2xl">From Concept to Creation</p>
           <h3 className="text-3xl md:text-[42px] font-semibold">Let’s talk</h3>

@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { SiGithub } from "react-icons/si";
 
@@ -27,6 +28,18 @@ export default function Projects() {
       tags: ["HTML", "Tailwind", "JavaScript"],
     },
     {
+      name: "SkillSphere",
+      image: "/assets/Projects/Skillsphere.png",
+      link: "https://skillsphere-rho.vercel.app/",
+      github: "#",
+      description:
+        "A modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.",
+      tags: ["Next JS", "API", "Tailwind"],
+    },
+  ];
+
+  const hiddenProjects = [
+    {
       name: "Github Issue Tracker",
       image: "/assets/Projects/Github-Issue-Tracker.png",
       link: "https://atikhasansarker.github.io/B13-Assignment05/",
@@ -35,9 +48,6 @@ export default function Projects() {
         "GitHub issue management interface with filtering and issue tracking functionalities.",
       tags: ["React", "API", "Tailwind"],
     },
-  ];
-
-  const hiddenProjects = [
     {
       name: "Fitness",
       image: "/assets/Projects/Fitness.png",
@@ -103,7 +113,7 @@ export default function Projects() {
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold">
             Personal{" "}
-            <span className="bg-gradient-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
@@ -130,7 +140,9 @@ export default function Projects() {
                   }`}
               >
                 <div className="relative overflow-hidden rounded-[28px] border border-white/10">
-                  <img
+                  <Image
+                    width={600}
+                    height={400}
                     src={project.image}
                     alt={project.name}
                     className="w-full h-[320px] object-cover transition duration-500 group-hover:scale-105"

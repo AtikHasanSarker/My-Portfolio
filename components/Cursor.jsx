@@ -1,45 +1,54 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Cursor() {
-    const [pos, setPos] = useState({ x: 0, y: 0 });
+  const cursorRef = useRef(null);
 
-    useEffect(() => {
-        const mouseMove = (e) => {
-            setPos({
-                x: e.clientX,
-                y: e.clientY,
-            });
-        };
+  useEffect(() => {
+    let mouseX = 0;
+    let mouseY = 0;
 
-        window.addEventListener("mousemove", mouseMove);
+    let currentX = 0;
+    let currentY = 0;
 
-        return () => {
-            window.removeEventListener("mousemove", mouseMove);
-        };
-    }, []);
+    const speed = 0.08; // lower = slower smoother
 
-    return (
-        <>
-            {/* Ring */}
-            <div
-                className="pointer-events-none fixed z-[9999] h-10 w-10 rounded-full border border-violet-500/80 shadow-[0_0_15px_rgba(139,92,246,0.5)] backdrop-blur-sm"
-                style={{
-                    left: pos.x - 20,
-                    top: pos.y - 20,
-                    transition: "transform 0.08s linear",
-                }}
-            />
+    const handleMouseMove = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
 
-            {/* Dot */}
-            <div
-                className="pointer-events-none fixed z-[9999] h-2 w-2 rounded-full bg-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.9)]"
-                style={{
-                    left: pos.x - 4,
-                    top: pos.y - 4,
-                }}
-            />
-        </>
-    );
+    window.addEventListener("mousemove", handleMouseMove);
+
+    const animate = () => {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+      }
+
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={cursorRef}
+      className="pointer-events-none fixed left-0 top-0 z-999"
+    >
+      {/* Ring */}
+      <div className="absolute -left-4 -top-4 h-8 w-8 rounded-full border-2 border-violet-800 backdrop-sm shadow-[0_0_15px_rgba(139,92,246,0.5)]" />
+
+      {/* Dot */}
+      <div className="absolute -left-0.5 -top-0.5 h-1 w-1 rounded-full bg-pink-500 shadow-[0_0_10px_rgba(236,72,153,0.9)]" />
+    </div>
+  );
 }

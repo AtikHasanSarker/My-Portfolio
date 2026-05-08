@@ -25,13 +25,13 @@ const educationData = [
 
 export default function EducationJourney() {
     return (
-        <section className="relative py-24 text-white">
+        <section id="#education" className="relative py-16 text-white">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-20">
                     <h2 className="text-5xl font-bold tracking-tight">
                         Education &{" "}
-                        <span className="bg-gradient-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+                        <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                             Journey
                         </span>
                     </h2>
@@ -44,7 +44,7 @@ export default function EducationJourney() {
                 {/* Timeline */}
                 <div className="relative">
                     {/* Vertical Line */}
-                    <div className="absolute left-3 top-0 h-full w-[2px] bg-gradient-to-b from-violet-500/60 to-transparent"></div>
+                    <div className="absolute left-3 top-0 h-full w-[2px] bg-linear-to-b from-violet-500/60 to-transparent"></div>
 
                     <div className="space-y-16">
                         {educationData.map((item, index) => (
