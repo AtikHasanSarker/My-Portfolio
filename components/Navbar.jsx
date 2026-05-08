@@ -92,6 +92,9 @@ export default function Navbar() {
                 <Link href="#project">Project</Link>
               </li>
               <li>
+                <Link href="#education">Project</Link>
+              </li>
+              <li>
                 <Link href="#contact">Contact</Link>
               </li>
             </ul>

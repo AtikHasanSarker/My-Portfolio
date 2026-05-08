@@ -25,7 +25,7 @@ const educationData = [
 
 export default function EducationJourney() {
     return (
-        <section id="#education" className="relative py-16 text-white">
+        <section id="education" className="relative py-16 text-white">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-20">
