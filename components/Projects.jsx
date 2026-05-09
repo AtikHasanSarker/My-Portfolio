@@ -111,7 +111,7 @@ export default function Projects() {
   return (
     <section
       id="project"
-      className="relative py-16 overflow-hidden text-white"
+      className="relative py-20 overflow-hidden text-white"
     >
       {/* Glow */}
       <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-violet-700/20 blur-[140px] rounded-full" />
@@ -119,7 +119,7 @@ export default function Projects() {
       <div className="relative z-10 w-11/12 mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-bold">
             Personal{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
@@ -138,7 +138,7 @@ export default function Projects() {
           {allProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-8 md:p-10 overflow-hidden"
+              className="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-4 md:p-10 overflow-hidden"
             >
               {/* Hover Glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-violet-500/10 to-pink-500/10" />

@@ -26,7 +26,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="w-10/12 lg:w-9/12 mx-auto mt-[50px] md:mt-[120px]">
+    <section id="hero" className="w-10/12 lg:w-9/12 mx-auto mt-12 md:mt-20">
       <div>
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
           <Image
@@ -57,9 +57,9 @@ export default function Hero() {
       <div className="flex justify-center my-[85px]">
         <a
           href="#contact"
-          className="p-2 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center text-[20px] md:text-2xl group relative cursor-pointer hover:scale-110 duration-300"
+          className="p-2 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl group relative cursor-pointer hover:scale-110 duration-300"
         >
-          <span className="p-4 relative right-1 transition-all duration-[3000ms] group-hover:left-[25%]">
+          <span className="p-4 relative right-1 transition-all duration-3000 group-hover:left-[28%]">
             CONTACT ME
           </span>
           <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959] relative right-1 transition-all duration-500 group-hover:right-[75%]">

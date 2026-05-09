@@ -81,14 +81,14 @@ export default function BackgroundAnimation() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10px] right-[-10px] min-w-[30%] min-h-[30%] rounded-full bg-[#1E1C4F] blur-[120px] opacity-70"></div>
         <div className="absolute top-[400px] left-[-100px] min-w-[30%] min-h-[30%] rounded-full bg-[#141087] blur-[200px] opacity-90"></div>
-        <div className="absolute top-[1000px] left-[-100px] min-w-[30%] min-h-[30%] rounded-full bg-[#2c297d] blur-[200px] opacity-70"></div>
-        <div className="absolute top-[1600px] right-[-20px] min-w-[30%] min-h-[30%] rounded-full bg-[#5710db] blur-[200px] opacity-90"></div>
-        <div className="absolute top-[2100px] left-[200px] min-w-[30%] min-h-[30%] rounded-full bg-[#3d02aa] blur-[120px] opacity-70"></div>
-        <div className="absolute top-[2800px] left-[-100px] min-w-[30%] min-h-[30%] rounded-full bg-[#5505eb] blur-[200px] opacity-70"></div>
+        <div className="absolute top-[1000px] left-[-100px] min-w-[30%] min-h-[30%] rounded-full bg-[#13114d] blur-[200px] opacity-70"></div>
+        <div className="absolute top-[1600px] right-[-20px] min-w-[30%] min-h-[30%] rounded-full bg-[#250267] blur-[200px] opacity-90"></div>
+        <div className="absolute top-[2100px] left-[200px] min-w-[30%] min-h-[30%] rounded-full bg-[#271548] blur-[120px] opacity-70"></div>
+        <div className="absolute top-[2800px] left-[-100px] min-w-[30%] min-h-[30%] rounded-full bg-[#160439] blur-[200px] opacity-70"></div>
       </div>
 
       {/* for animation */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-[11]">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-11">
         <div className="blob blob1"></div>
         <div className="blob blob2"></div>
         <div className="blob blob3"></div>

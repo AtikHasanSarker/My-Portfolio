@@ -32,20 +32,20 @@
 }
 
 .blob1 {
-  background: #2924c2;
+  background: #0d0a61;
   top: -100px;
   left: -100px;
 }
 
 .blob2 {
-  background: #023959;
+  background: #0e0b39;
   bottom: -150px;
   right: -100px;
   animation-duration: 25s;
 }
 
 .blob3 {
-  background: #2c0465;
+  background: #0f023a;
   top: 50%;
   left: 50%;
   animation-duration: 30s;
@@ -65,3 +65,4 @@
 html {
   scroll-behavior: smooth;
 }
+

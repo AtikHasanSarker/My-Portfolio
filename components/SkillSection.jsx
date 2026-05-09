@@ -51,8 +51,8 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="max-w-6xl mx-auto text-white pb-20 px-5 md:px-10">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="skills" className="max-w-6xl mx-auto text-white pb:10 md:pb-20 px-3 md:px-10">
+      <div className="max-w-6xl mx-auto px-3">
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-bold">
