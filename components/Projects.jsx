@@ -81,7 +81,7 @@ export default function Projects() {
       link: "https://atikhasansarker.github.io/Techwave/",
       github: "#",
       description:
-        "Technology focused landing page with modern gradients and interactive sections.",
+        "Technology focused landing page with modern linears and interactive sections.",
       tags: ["HTML", "CSS", "JavaScript"],
     },
     {
@@ -120,7 +120,7 @@ export default function Projects() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold">
             Personal{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
               Projects
@@ -141,7 +141,7 @@ export default function Projects() {
               className="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-4 md:p-10 overflow-hidden"
             >
               {/* Hover Glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-violet-500/10 to-pink-500/10" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-r from-violet-500/10 to-pink-500/10" />
 
               {/* Image */}
               <div
@@ -157,7 +157,7 @@ export default function Projects() {
                     className="w-full h-[320px] object-cover transition duration-500 group-hover:scale-105"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
                 </div>
 
                 {/* Blur */}
@@ -174,7 +174,7 @@ export default function Projects() {
                   Featured Project
                 </div>
 
-                <h3 className="text-4xl font-bold mb-5">
+                <h3 className="text-3xl font-bold mb-5">
                   {project.name}
                 </h3>
 
@@ -200,7 +200,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-violet-500 to-pink-500 text-white font-semibold transition duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-linear-to-r from-violet-500 to-pink-500 text-white font-semibold transition duration-300 hover:scale-105"
                   >
                     <SiGithub size={20} />
                     Github

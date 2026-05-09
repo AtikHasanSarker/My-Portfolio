@@ -46,11 +46,11 @@ const techStack = [
 
 export default function TechStack() {
     return (
-        <section className="py:10 md:py-16 text-white">
+        <section className="py-20 text-white">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold">
+                    <h2 className="text-4xl md:text-5xl font-bold">
                         Tech{" "}
                         <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                             Stack

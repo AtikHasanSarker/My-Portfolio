@@ -34,7 +34,7 @@ const middleSkills = [
 
 export default function SkillOrbit() {
     return (
-        <section className="relative overflow-hidden py-20">
+        <section className="relative overflow-hidden py-15">
             {/* Background Glow */}
             <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-fuchsia-600/20 blur-[140px]" />
 

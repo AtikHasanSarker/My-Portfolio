@@ -30,8 +30,8 @@ export default function EducationJourney() {
       <section id="education" className="relative py-10 md:py-16 text-white">
         <div className="max-w-6xl mx-auto px-3">
           {/* Heading */}
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold tracking-tight">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Education &{" "}
               <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                 Journey

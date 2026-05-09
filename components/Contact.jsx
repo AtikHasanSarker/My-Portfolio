@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
-    <section id="contact" className="mt-10 md:mt-20">
-      <h2 className="text-5xl font-bold text-center mb-15 md:mb-20">
+    <section id="contact" className="mt-20">
+      <h2 className="text-5xl font-bold text-center mb-12 md:mb-20">
         Contact{" "}
         <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
           Me
