@@ -3,16 +3,16 @@ import { RiGraduationCapFill } from "react-icons/ri";
 const educationData = [
     {
         year: "2020 - 2022",
-        title: "HSC",
-        subtitle: "Completed (Session 2021)",
+        title: "Higher Secondary Certificate (HSC)",
+        subtitle: "Completed (Session 2020-2021)",
         description:
-            "Completed HSC from Rangpur Govt. City College.",
+            "Completed HSC from Rangpur Govt. City College, and my background was Science.",
     },
     {
         year: "2024 - Running",
         title:
             "Bachelor of Social Science (BSS)",
-        subtitle: "Semester 4 (Session 2023–24)",
+        subtitle: "Semester 4 (Session 2023-2024)",
         description:
             "Currently pursuing BSS in Information Science and Library Management, from Noakhali Science and Technology University, focusing information management, digital libraries, data science, and modern web technologies.",
     },
@@ -71,7 +71,7 @@ export default function EducationJourney() {
                       {item.year}
                     </span>
 
-                    <h3 className="text-3xl font-bold mt-4 leading-snug">
+                    <h3 className="text-2xl font-bold mt-4 leading-snug">
                       {item.title}
                     </h3>
 
