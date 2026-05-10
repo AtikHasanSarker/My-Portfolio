@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact" className="mt-20">
-      <h2 className="text-5xl font-bold text-center mb-12 md:mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-20">
         Contact{" "}
         <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
           Me
@@ -23,7 +23,7 @@ export default function Contact() {
               <p className="text-sm">Email Me : atiksagor24@gmail.com</p>
             </div>
             <div className="flex justify-center">
-              <button className="p-2 pl-4 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
+              <button className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
                 <span className="p-2">SEND EMAIL</span>
                 <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
                   <i className="fa-solid fa-arrow-right-long"></i>
@@ -41,7 +41,7 @@ export default function Contact() {
               <p className="text-sm">Have a project? Contact Me Now</p>
             </div>
             <div className="flex justify-center">
-              <button className="p-2 pl-4 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
+              <button className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
                 <span className="p-2">CONTACT </span>
                 <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
                   <i className="fa-solid fa-arrow-right-long"></i>
@@ -59,7 +59,7 @@ export default function Contact() {
               <p className="text-sm">Let’s schedule A meeting!</p>
             </div>
             <div className="flex justify-center">
-              <button className="p-2 pl-4 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
+              <button className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
                 <span className="p-2">CALENDAR</span>
                 <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
                   <i className="fa-solid fa-arrow-right-long"></i>

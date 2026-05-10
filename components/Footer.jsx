@@ -2,37 +2,37 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#000c3364] mt-[100px] p-10 md:p-[56px] text-white">
-      <div className="flex flex-col lg:flex-row gap-8 md:gap-[120px] justify-center">
+    <footer className="bg-[#000c3364] mt-25 p-10 md:p-14 text-white">
+      <div className="flex flex-col lg:flex-row gap-8 md:gap-30 justify-center">
         <div>
           <Image
             width={100}
             height={100}
             src="/assets/logo.png"
             alt="Logo"
-            className="w-[120px] h-[70px] mb-4"
+            className="w-30 h-17.5 mb-4"
           />
           <h1 className="bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-2xl font-black text-transparent mb-5">
             {"<Atik Hasan Sarker />"}
           </h1>
           <p className="text-sm text-gray-400">© Copyright 2026</p>
         </div>
-        <div className="space-y-[10px]">
+        <div className="space-y-2.5">
           <h5 className="font-bold text-xl">Why trust us</h5>
           <ul className="font-medium text-gray-400">
-            <li>Email</li>
-            <li>Phone</li>
-            <li>Linkedin</li>
-            <li>WhatsApp</li>
+            <li className="hover:text-white">Email</li>
+            <li className="hover:text-white">Phone</li>
+            <li className="hover:text-white">Linkedin</li>
+            <li className="hover:text-white">WhatsApp</li>
           </ul>
         </div>
         <div className="space-y-[10px]">
           <h5 className="font-bold text-xl">Contact</h5>
           <ul className="font-medium text-gray-400">
-            <li>Email</li>
-            <li>Phone</li>
-            <li>Linkedin</li>
-            <li>WhatsApp</li>
+            <li className="hover:text-white">Email</li>
+            <li className="hover:text-white">Phone</li>
+            <li className="hover:text-white">Linkedin</li>
+            <li className="hover:text-white">WhatsApp</li>
           </ul>
         </div>
         <div className="space-y-[10px]">

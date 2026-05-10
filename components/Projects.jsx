@@ -10,15 +10,6 @@ export default function Projects() {
 
   const initialProjects = [
     {
-      name: "Ai Model Hub",
-      image: "/assets/Projects/Ai-model-hub.png",
-      link: "https://ai-model-hub-atik.netlify.app/",
-      github: "#",
-      description:
-        "Experience the full spectrum of frontier intelligence — all the most advanced AI models, unified under a single, powerful subscription.",
-      tags: ["React", "API", "Tailwind"],
-    },
-    {
       name: "English Janala",
       image: "/assets/Projects/English-Janala.png",
       link: "https://atikhasansarker.github.io/English-Janala/",
@@ -26,6 +17,15 @@ export default function Projects() {
       description:
         "Interactive English learning platform with vocabulary, lessons and responsive UI design.",
       tags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Ai Model Hub",
+      image: "/assets/Projects/Ai-model-hub.png",
+      link: "https://ai-model-hub-atik.netlify.app/",
+      github: "#",
+      description:
+        "Experience the full spectrum of frontier intelligence — all the most advanced AI models, unified under a single, powerful subscription.",
+      tags: ["React", "API", "Tailwind"],
     },
     {
       name: "Payoo",

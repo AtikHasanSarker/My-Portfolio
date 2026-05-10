@@ -19,16 +19,16 @@ export default function Home() {
       <div className="relative z-20">
         <Navbar />
         <main>
-          <IntroLoader/>
+          <IntroLoader />
           <SmoothScroll />
           <Hero />
-          <About />
-          <TechStack />
-          <SkillOrbit />
-          <SkillsSection/>
-          <Projects />
-          <EducationJourney />
-          <Contact />
+            <About />
+            <TechStack />
+            <SkillOrbit />
+            <SkillsSection />
+            <Projects />
+            <EducationJourney />
+            <Contact />
         </main>
         <Footer />
       </div>
