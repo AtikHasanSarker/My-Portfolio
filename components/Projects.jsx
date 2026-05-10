@@ -13,9 +13,18 @@ export default function Projects() {
       name: "English Janala",
       image: "/assets/Projects/English-Janala.png",
       link: "https://atikhasansarker.github.io/English-Janala/",
-      github: "#",
+      github: "https://github.com/AtikHasanSarker/English-Janala",
       description:
         "Interactive English learning platform with vocabulary, lessons and responsive UI design.",
+      tags: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Techwave",
+      image: "/assets/Projects/Techwave.png",
+      link: "https://atikhasansarker.github.io/Techwave/",
+      github: "#",
+      description:
+        "Technology focused landing page with modern linears and interactive sections.",
       tags: ["HTML", "CSS", "JavaScript"],
     },
     {
@@ -28,34 +37,26 @@ export default function Projects() {
       tags: ["React", "API", "Tailwind"],
     },
     {
-      name: "Payoo",
-      image: "/assets/Projects/Payoo.png",
-      link: "https://atikhasansarker.github.io/PAYOO-MFS/",
-      github: "#",
+      name: "Pixgen",
+      image: "/assets/Projects/pixgen.png",
+      link: "https://pixgen-lake.vercel.app/",
+      github: "https://github.com/AtikHasanSarker/pixgen",
       description:
-        "Mobile banking inspired financial UI with balance tracking and transaction features.",
+        "HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.",
       tags: ["HTML", "Tailwind", "JavaScript"],
     },
-    {
-      name: "SkillSphere",
-      image: "/assets/Projects/Skillsphere.png",
-      link: "https://skillsphere-rho.vercel.app/",
-      github: "#",
-      description:
-        "A modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.",
-      tags: ["Next JS", "API", "MongoDB"],
-    },
+    
   ];
 
   const hiddenProjects = [
     {
-      name: "Github Issue Tracker",
-      image: "/assets/Projects/Github-Issue-Tracker.png",
-      link: "https://atikhasansarker.github.io/B13-Assignment05/",
-      github: "#",
+      name: "Hero Apps",
+      image: "/assets/Projects/hero-apps.png",
+      link: "https://hero-apps-ecru.vercel.app",
+      github: "https://github.com/AtikHasanSarker/Hero-Apps",
       description:
-        "GitHub issue management interface with filtering and issue tracking functionalities.",
-      tags: ["React", "API", "Tailwind"],
+        "HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.",
+      tags: ["HTML", "Tailwind", "JavaScript"],
     },
     {
       name: "Fitness",
@@ -67,6 +68,15 @@ export default function Projects() {
       tags: ["HTML", "CSS", "UI Design"],
     },
     {
+      name: "SkillSphere",
+      image: "/assets/Projects/Skillsphere.png",
+      link: "https://skillsphere-rho.vercel.app/",
+      github: "#",
+      description:
+        "A modern online learning platform where users can explore courses, watch lessons, and enroll in skill-based programs like Web Development, Design, Marketing, and more.",
+      tags: ["Next JS", "API", "MongoDB"],
+    },
+    {
       name: "Portfolio 4",
       image: "/assets/Projects/Portfolio4.png",
       link: "https://atikhasansarker.github.io/Portfolio-Designs/Portfolio4/",
@@ -75,15 +85,7 @@ export default function Projects() {
         "Creative portfolio design focused on smooth layouts and elegant visuals.",
       tags: ["Portfolio", "Tailwind", "Responsive"],
     },
-    {
-      name: "Techwave",
-      image: "/assets/Projects/Techwave.png",
-      link: "https://atikhasansarker.github.io/Techwave/",
-      github: "#",
-      description:
-        "Technology focused landing page with modern linears and interactive sections.",
-      tags: ["HTML", "CSS", "JavaScript"],
-    },
+
     {
       name: "Legal Solutions",
       image: "/assets/Projects/Legal-Solutions.png",
@@ -101,6 +103,24 @@ export default function Projects() {
       description:
         "E-commerce inspired influencer gear showcase website with modern design.",
       tags: ["E-commerce", "CSS", "Responsive"],
+    },
+    {
+      name: "PAYOO-MFS",
+      image: "/assets/Projects/payoo.png",
+      link: "https://atikhasansarker.github.io/PAYOO-MFS",
+      github: "#",
+      description:
+        "PAYOO is a smart Mobile Financial Services (MFS) interface that provides a seamless digital banking experience.",
+      tags: ["E-commerce", "CSS", "Responsive"],
+    },
+    {
+      name: "Github Issue Tracker",
+      image: "/assets/Projects/Github-Issue-Tracker.png",
+      link: "https://atikhasansarker.github.io/B13-Assignment05/",
+      github: "#",
+      description:
+        "GitHub issue management interface with filtering and issue tracking functionalities.",
+      tags: ["React", "API", "Tailwind"],
     },
   ];
 

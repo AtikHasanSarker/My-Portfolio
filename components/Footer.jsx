@@ -31,8 +31,19 @@ export default function Footer() {
           <ul className="font-medium text-gray-400">
             <li className="hover:text-white">Email</li>
             <li className="hover:text-white">Phone</li>
-            <li className="hover:text-white">Linkedin</li>
-            <li className="hover:text-white">WhatsApp</li>
+            <li className="hover:text-white">
+              <a
+                href="https://www.linkedin.com/in/atik-hasan-sarker"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+            </li>
+            <li className="hover:text-white">
+              <a href="https://wa.me/8801521791091" target="_blank">
+                WhatsApp
+              </a>
+            </li>
           </ul>
         </div>
         <div className="space-y-[10px]">

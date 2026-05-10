@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import Typed from "typed.js";
 
 export default function Hero() {
@@ -39,11 +40,9 @@ export default function Hero() {
           <div className="flex-1">
             <h1 className="font-bold text-5xl md:text-6xl">
               Hi, I&apos;m{" "}
-
               <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                 Atik Hasan
               </span>
-
             </h1>
             <h3 className="py-6 text-3xl md:text-[42px] font-semibold">
               Frontend Web Developer
@@ -51,6 +50,33 @@ export default function Hero() {
             <p>
               <span className="text-xl" ref={typingRef}></span>
             </p>
+
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-8 text-3xl mt-10 pl-40">
+              <a
+                href="https://github.com/AtikHasanSarker"
+                target="_blank"
+                className="hover:text-white text-muted-foreground transition"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/atik-hasan-sarker"
+                target="_blank"
+                className="hover:text-white text-muted-foreground transition"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                href="https://www.facebook.com/atiksagor24.50.80"
+                target="_blank"
+                className="hover:text-white text-muted-foreground transition"
+              >
+                <FaFacebook />
+              </a>
+            </div>
           </div>
         </div>
       </div>

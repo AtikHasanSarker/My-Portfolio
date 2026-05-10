@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="w-11/12 lg:w-max-w-6xl mx-auto mb-10 md:mb-20">
+    <section
+      id="about"
+      className="w-11/12 lg:w-max-w-6xl mx-auto mb-10 md:mb-20"
+    >
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold">
           About{" "}
@@ -12,17 +15,19 @@ export default function About() {
       <div className="space-y-8 text-center p-6 md:px-20 md:py-12 bg-[#352f651a] rounded-3xl">
         <div>
           <p className="text-xl">My Introduction</p>
-          <h3 className="text-3xl font-semibold">
-            Let’s see that
-          </h3>
+          <h3 className="text-3xl font-semibold">Let’s see that</h3>
         </div>
         <p className="text-justify">
-          I’m a passionate frontend developer focused on building modern,
-          interactive, and immersive digital experiences. I enjoy blending clean
-          code with creative design to create smooth, responsive, and visually
-          engaging interfaces. My goal is to craft websites that not only
-          function perfectly but also leave a memorable experience for users
-          through thoughtful animations, modern UI, and attention to detail.
+          I’m a passionate frontend developer who enjoys building modern,
+          responsive, and interactive web experiences. My programming journey
+          started with curiosity about how websites work, and over time I
+          developed skills in HTML, CSS, JavaScript, React, Next JS and Tailwind CSS.
+          <br /> 
+          <br /> 
+          I love creating clean UI designs, smooth animations, and user-friendly
+          interfaces that feel engaging and modern. Outside of programming, I
+          enjoy exploring new design trends, listening to music, and learning
+          new technologies to improve my skills. 
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-between">
           <div className="p-10 bg-violet-950 rounded-xl">
