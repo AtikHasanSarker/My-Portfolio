@@ -9,9 +9,15 @@ import {
     SiMongodb,
     SiFigma,
     SiExpress,
-    SiAudiobookshelf,
     SiMysql,
 } from "react-icons/si";
+
+import { motion } from "framer-motion";
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 import { BiLogoCss3, BiLogoCPlusPlus } from "react-icons/bi";
 
@@ -38,7 +44,13 @@ export default function SkillOrbit() {
             {/* Background Glow */}
             <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-fuchsia-600/20 blur-[140px]" />
 
-            <div className="relative mx-auto flex max-w-6xl flex-col items-center">
+            <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="relative mx-auto flex max-w-6xl flex-col items-center"
+            >
                 {/* TOP ICONS */}
                 <div className="relative mb-28 h-[180px] w-full">
                     {topSkills.map((item, i) => (
@@ -127,7 +139,10 @@ export default function SkillOrbit() {
                         </div>
                     ))}
                 </div>
-            </div>
+
+            </motion.div>
+
+
         </section>
     );
 }

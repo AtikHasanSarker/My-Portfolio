@@ -1,3 +1,4 @@
+"use client";
 import {
     SiReact,
     SiNextdotjs,
@@ -8,6 +9,22 @@ import {
     SiExpress,
     SiGithub,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const techStack = [
     {
@@ -49,7 +66,13 @@ export default function TechStack() {
         <section className="py-20 text-white">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}
-                <div className="text-center mb-16">
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="text-center mb-16"
+                >
                     <h2 className="text-4xl md:text-5xl font-bold">
                         Tech{" "}
                         <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
@@ -60,15 +83,22 @@ export default function TechStack() {
                     <p className="text-gray-400 mt-4 text-lg">
                         Tools & technologies I use
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <motion.div
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+                >
                     {techStack.map((tech, index) => {
                         const Icon = tech.icon;
 
                         return (
-                          <div
+                          <motion.div
+                            variants={fadeUp}
                             key={index}
                             className="group rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-8 flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500/30 hover:bg-white/10 hover:-translate-y-1 hover:scale-105"
                           >
@@ -84,10 +114,10 @@ export default function TechStack() {
                             <h3 className="font-semibold text-gray-200">
                               {tech.name}
                             </h3>
-                          </div>
+                          </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

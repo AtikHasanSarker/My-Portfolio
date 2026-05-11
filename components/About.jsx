@@ -1,18 +1,38 @@
+"use client";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
 export default function About() {
   return (
     <section
       id="about"
       className="w-11/12 lg:w-max-w-6xl mx-auto mb-10 md:mb-20"
     >
-      <div className="text-center mb-16">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="text-center mb-16"
+      >
         <h2 className="text-4xl md:text-5xl font-bold">
           About{" "}
           <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
             Me
           </span>
         </h2>
-      </div>
-      <div className="space-y-8 text-center p-6 md:px-20 md:py-12 bg-[#352f651a] rounded-3xl">
+      </motion.div>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="space-y-8 text-center p-6 md:px-20 md:py-12 bg-[#352f651a] rounded-3xl"
+      >
         <div>
           <p className="text-xl">My Introduction</p>
           <h3 className="text-3xl font-semibold">Let’s see that</h3>
@@ -51,7 +71,7 @@ export default function About() {
             </span>
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

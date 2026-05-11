@@ -10,6 +10,23 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { Code2, Database, Globe, Layers3, Server, Cloud } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 
 export default function SkillsSection() {
   const expertise = [
@@ -54,7 +71,13 @@ export default function SkillsSection() {
     <section id="skills" className="max-w-6xl mx-auto text-white pb-20 px-3 md:px-10">
       <div className="max-w-6xl mx-auto px-3">
         {/* Heading */}
-        <div className="text-center mb-14">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-14"
+        >
           <h2 className="text-4xl md:text-5xl font-bold">
             My{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
@@ -66,12 +89,19 @@ export default function SkillsSection() {
             Technologies and tools I use to build modern, scalable and beautiful
             digital experiences.
           </p>
-        </div>
+        </motion.div>
 
         {/* Expertise Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mb-20">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-7 mb-20"
+        >
           {expertise.map((item, index) => (
-            <div
+            <motion.div
+              variants={fadeUp}
               key={index}
               className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 transition-all duration-500 hover:-translate-y-2 hover:border-violet-500/40"
             >
@@ -105,20 +135,32 @@ export default function SkillsSection() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Skills */}
-        <div className="bg-white/5 border border-white/10 rounded-[30px] p-6 md:p-10 backdrop-blur-xl">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="bg-white/5 border border-white/10 rounded-[30px] p-6 md:p-10 backdrop-blur-xl"
+        >
           <div className="flex items-center gap-3 mb-10">
             <Layers3 className="text-violet-400" />
             <h3 className="text-3xl font-semibold">Skills</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8"
+          >
             {skills.map((skill, index) => (
-              <div key={index}>
+              <motion.div variants={fadeUp} key={index}>
                 {/* Top */}
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex gap-4 items-center">
@@ -142,10 +184,10 @@ export default function SkillsSection() {
                     }}
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

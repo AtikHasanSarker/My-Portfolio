@@ -3,6 +3,12 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import Typed from "typed.js";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 export default function Hero() {
   const typingRef = useRef(null);
@@ -28,7 +34,12 @@ export default function Hero() {
 
   return (
     <section id="hero" className="w-10/12 lg:w-9/12 mx-auto mt-12 md:mt-20">
-      <div>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
           <Image
             src="/assets/atik.jpg"
@@ -79,8 +90,14 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center my-[85px]">
+      </motion.div>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="flex justify-center my-[85px]"
+      >
         <a
           href="#contact"
           className="p-2 border border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl group relative cursor-pointer hover:scale-110 duration-300"
@@ -92,12 +109,19 @@ export default function Hero() {
             <i className="fa-solid fa-mobile-screen-button"></i>
           </span>
         </a>
-      </div>
-      <a href="#about" className="flex justify-center mb-[80px]">
+      </motion.div>
+      <motion.a
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        href="#about"
+        className="flex justify-center mb-[80px]"
+      >
         <div className="text-[#B7B4E4] bg-[#d9d9d91a] hover:bg-gray-700 rounded-full w-[64px] h-[96px] flex justify-center items-center">
           <i className="fa-solid fa-angles-down"></i>
         </div>
-      </a>
+      </motion.a>
     </section>
   );
 }

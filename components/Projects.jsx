@@ -4,6 +4,23 @@ import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { SiGithub } from "react-icons/si";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -139,7 +156,13 @@ export default function Projects() {
       <div className="relative z-10 w-11/12 mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center mb-12"
+        >
           <h2 className="text-4xl md:text-5xl font-bold">
             Personal{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
@@ -151,12 +174,19 @@ export default function Projects() {
             Here are some of my featured projects built while exploring modern
             web technologies and UI design.
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects */}
-        <div className="space-y-16">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="space-y-16"
+        >
           {allProjects.map((project, index) => (
-            <div
+            <motion.div
+              variants={fadeUp}
               key={index}
               className="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-4 md:p-10 overflow-hidden"
             >
@@ -238,19 +268,25 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Button */}
-        <div className="flex justify-center mt-16">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="flex justify-center mt-16"
+        >
           <button
             onClick={() => setShowAll(!showAll)}
             className="px-8 py-4 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-md hover:bg-white/10 transition-all duration-300 hover:scale-105"
           >
             {showAll ? "See Less" : "See All Projects"}
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

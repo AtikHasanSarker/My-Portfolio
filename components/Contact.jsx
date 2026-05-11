@@ -1,15 +1,37 @@
+"use client";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Contact() {
   return (
     <section id="contact" className="mt-20">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-20">
-        Contact{" "}
-        <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
-          Me
-        </span>
-      </h2>
-      <div className="w-10/12 mx-auto text-center border border-[#8d8d8d3f] bg-[#242e4e5e] bg-blend-saturation rounded-2xl p-6">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="text-center mb-12 md:mb-20"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold">
+          Contact{" "}
+          <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+            Me
+          </span>
+        </h2>
+      </motion.div>
+
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="w-10/12 mx-auto text-center border border-[#8d8d8d3f] bg-[#242e4e5e] bg-blend-saturation rounded-2xl p-6"
+      >
         <div>
           <p className="text-2xl">From Concept to Creation</p>
           <h3 className="text-3xl md:text-[42px] font-semibold">Let’s talk</h3>
@@ -86,7 +108,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
