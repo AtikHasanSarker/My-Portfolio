@@ -75,7 +75,7 @@ export default function Navbar() {
             (item) => (
               <Link
                 key={item}
-                href={`#${item === "Home" ? "#" : item.toLowerCase()}`}
+                href={`#${item === "Home" ? "" : item.toLowerCase()}`}
                 className="relative group font-medium transition-all duration-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:bg-clip-text hover:text-transparent"
               >
                 {item}

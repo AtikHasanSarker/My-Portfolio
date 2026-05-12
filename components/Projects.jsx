@@ -185,8 +185,7 @@ export default function Projects() {
           className="space-y-16"
         >
           {allProjects.map((project, index) => (
-            <motion.div
-              variants={fadeUp}
+            <div
               key={index}
               className="group relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center rounded-[36px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-4 md:p-10 overflow-hidden"
             >
@@ -268,7 +267,7 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
 
