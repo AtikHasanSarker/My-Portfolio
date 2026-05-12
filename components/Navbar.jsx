@@ -71,11 +71,11 @@ export default function Navbar() {
         </button>
 
         <div className="gap-10 hidden lg:flex">
-          {["Home", "About", "Skills", "Project", "Education", "Contact"].map(
+          {["Home", "About", "Skills", "Projects", "Education", "Contact"].map(
             (item) => (
               <Link
                 key={item}
-                href={`#${item === "Home" ? "hero" : item.toLowerCase()}`}
+                href={`#${item === "Home" ? "#" : item.toLowerCase()}`}
                 className="relative group font-medium transition-all duration-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:bg-clip-text hover:text-transparent"
               >
                 {item}
