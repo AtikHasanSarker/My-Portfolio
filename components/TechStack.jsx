@@ -87,7 +87,7 @@ export default function TechStack() {
 
                 {/* Grid */}
                 <motion.div
-                  variants={staggerContainer}
+                  variants={fadeUp}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-100px" }}
@@ -97,8 +97,7 @@ export default function TechStack() {
                         const Icon = tech.icon;
 
                         return (
-                          <motion.div
-                            variants={fadeUp}
+                          <div
                             key={index}
                             className="group rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-8 flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500/30 hover:bg-white/10 hover:-translate-y-1 hover:scale-105"
                           >
@@ -114,7 +113,7 @@ export default function TechStack() {
                             <h3 className="font-semibold text-gray-200">
                               {tech.name}
                             </h3>
-                          </motion.div>
+                          </div>
                         );
                     })}
                 </motion.div>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/react";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +20,6 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // className =
-  //   "flex justify-between rounded-2xl w-full bg-[#f1f1f11a] lg:w-[70%] mx-auto p-4 items-center backdrop-blur";
 
   return (
     <header id="home" className="w-11/12 mx-auto pt-8 sticky top-0 z-50">
@@ -87,12 +85,16 @@ export default function Navbar() {
           )}
         </div>
         <div className="hidden md:flex">
-          <Link href="https://www.linkedin.com/in/atik-hasan-sarker/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/atik-hasan-sarker/"
+            target="_blank"
+          >
             <Button
               className="bg-linear-to-r from-violet-400 to-pink-500 hover:scale-105 transition-all duration-300"
               size="lg"
             >
-              Hire Me
+              Hire Me{" "}
+              <LuArrowRight/>
             </Button>
           </Link>
         </div>
@@ -104,7 +106,7 @@ export default function Navbar() {
               className="flex flex-col gap-2 p-4"
             >
               <li>
-                <Link href="#hero">Home</Link>
+                <Link href="#">Home</Link>
               </li>
               <li>
                 <Link href="#about">About</Link>
@@ -113,10 +115,10 @@ export default function Navbar() {
                 <Link href="#skills">Skills</Link>
               </li>
               <li>
-                <Link href="#project">Project</Link>
+                <Link href="#projects">Projects</Link>
               </li>
               <li>
-                <Link href="#education">Project</Link>
+                <Link href="#education">Education</Link>
               </li>
               <li>
                 <Link href="#contact">Contact</Link>

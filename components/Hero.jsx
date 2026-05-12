@@ -63,7 +63,7 @@ export default function Hero() {
             </p>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-8 text-3xl mt-10 pl-40">
+            <div className="flex gap-8 text-3xl mt-10 pl:15 md:pl-40">
               <a
                 href="https://github.com/AtikHasanSarker"
                 target="_blank"

@@ -147,7 +147,7 @@ export default function Projects() {
 
   return (
     <section
-      id="project"
+      id="projects"
       className="relative py-20 overflow-hidden text-white"
     >
       {/* Glow */}

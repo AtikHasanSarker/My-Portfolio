@@ -74,12 +74,12 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex justify-center">
-              <button className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
+              <a href="tel:01768626650" className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
                 <span className="p-2">CONTACT </span>
                 <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
                   <i className="fa-solid fa-arrow-right-long"></i>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
