@@ -55,7 +55,7 @@ export default function Footer() {
               className="bg-transparent px-2 md:px-6 py-3 text-gray-300 placeholder-gray-400 border-none focus:outline-none w-full min-w-[100px] md:w-[200px]"
             />
 
-            <button className="bg-linear-to-r from-violet-400 to-pink-500 px-4 md:px-6 py-3 rounded-full">
+            <button className="bg-linear-to-r from-violet-400 to-pink-500 px-4 md:px-6 py-3 rounded-full text-white font-semibold hover:scale-105 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300">
               Join
             </button>
           </div>

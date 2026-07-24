@@ -1,13 +1,76 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/react";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowRight, LuMenu, LuX } from "react-icons/lu";
+
+const navItems = [
+  { label: "Home", sectionId: "hero" },
+  { label: "About", sectionId: "about" },
+  { label: "Skills", sectionId: "skills" },
+  { label: "Projects", sectionId: "projects" },
+  { label: "Education", sectionId: "education" },
+  { label: "Contact", sectionId: "contact" },
+];
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const scrollToSection = useCallback(
+    (sectionId) => {
+      if (isHomePage) {
+        if (sectionId === "hero") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const navbarHeight = 100;
+            const top =
+              element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+        }
+        window.history.replaceState(null, "", `#${sectionId}`);
+        setActiveSection(sectionId);
+      } else {
+        window.location.href = `/#${sectionId}`;
+      }
+    },
+    [isHomePage]
+  );
+
+  const handleNavClick = useCallback(
+    (sectionId) => {
+      setDrawerOpen(false);
+      // Small delay to let drawer close animation start before scrolling
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 50);
+    },
+    [scrollToSection]
+  );
+
+  const handleHireMeClick = useCallback(() => {
+    setDrawerOpen(false);
+  }, []);
+
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    if (drawerOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [drawerOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,76 +78,92 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // IntersectionObserver to update active section on scroll (homepage only)
+  useEffect(() => {
+    if (!isHomePage) return;
+
+    const observers = [];
+
+    navItems.forEach(({ sectionId }) => {
+      const element = document.getElementById(sectionId);
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(sectionId);
+              window.history.replaceState(null, "", `#${sectionId}`);
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, [isHomePage]);
+
   return (
-    <header id="home" className="w-11/12 mx-auto pt-8 sticky top-0 z-50">
+    <header id="home" className="w-11/12 mx-auto pt-4 sticky top-0 z-50">
       <nav
-        className={`flex justify-between rounded-2xl w-full lg:w-[70%] mx-auto p-4 items-center backdrop-blur
-      ${scrolled && "bg-[#f1f1f11a]"}`}
+        className={`flex justify-between rounded-2xl w-full lg:w-[70%] mx-auto p-3 items-center backdrop-blur transition-all duration-300
+      ${scrolled ? "bg-[#f1f1f11a]" : ""}`}
       >
         <div className="flex gap-2 items-center">
-          <Image
-            width={100}
-            height={100}
-            id="logo"
-            src="/assets/logo.png"
-            alt="Logo"
-            className="w-10 h-6"
-          />
+          <Link href="/">
+            <Image
+              width={100}
+              height={100}
+              id="logo"
+              src="/assets/logo.png"
+              alt="Logo"
+              className="w-10 h-6"
+            />
+          </Link>
           <p className="text-xl">|</p>
         </div>
 
-        {/* Hamburger Menu */}
+        {/* Hamburger Menu - visible on mobile/tablet */}
         <button
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+          className="lg:hidden flex items-center justify-center w-10 h-10"
+          onClick={() => setDrawerOpen(true)}
+          aria-label="Open menu"
         >
-          <span className="sr-only">Menu</span>
-          <svg
-            className="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          <LuMenu className="w-6 h-6" />
         </button>
 
+        {/* Desktop Nav */}
         <div className="gap-10 hidden lg:flex">
-          {["Home", "About", "Skills", "Projects", "Education", "Contact"].map(
-            (item) => (
-              <Link
-                key={item}
-                href={`#${item === "Home" ? "" : item.toLowerCase()}`}
-                className="relative group font-medium transition-all duration-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:bg-clip-text hover:text-transparent"
-              >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-linear-to-r from-violet-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ),
-          )}
+          {navItems.map(({ label, sectionId }) => (
+            <button
+              key={label}
+              onClick={() => handleNavClick(sectionId)}
+              className={`relative group font-medium transition-all duration-300 cursor-pointer ${
+                activeSection === sectionId && isHomePage
+                  ? "bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent"
+                  : "hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:bg-clip-text hover:text-transparent"
+              }`}
+            >
+              {label}
+              <span
+                className={`absolute left-0 -bottom-1 h-0.5 bg-linear-to-r from-violet-400 to-pink-500 transition-all duration-300 ${
+                  activeSection === sectionId && isHomePage
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
+                }`}
+              />
+            </button>
+          ))}
         </div>
-        <div className="hidden md:flex">
+
+        <div className="hidden lg:flex">
           <Link
             href="https://www.linkedin.com/in/atik-hasan-sarker/"
             target="_blank"
@@ -93,40 +172,79 @@ export default function Navbar() {
               className="bg-linear-to-r from-violet-400 to-pink-500 hover:scale-105 transition-all duration-300"
               size="lg"
             >
-              Hire Me{" "}
-              <LuArrowRight/>
+              Hire Me <LuArrowRight />
             </Button>
           </Link>
         </div>
-
-        {isMenuOpen && (
-          <div className="border-t border-separator md:hidden absolute top-full right-0 w-fit bg-[#f1f1f11a] rounded-b-2xl backdrop-blur">
-            <ul
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex flex-col gap-2 p-4"
-            >
-              <li>
-                <Link href="#">Home</Link>
-              </li>
-              <li>
-                <Link href="#about">About</Link>
-              </li>
-              <li>
-                <Link href="#skills">Skills</Link>
-              </li>
-              <li>
-                <Link href="#projects">Projects</Link>
-              </li>
-              <li>
-                <Link href="#education">Education</Link>
-              </li>
-              <li>
-                <Link href="#contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Drawer - Manual Implementation */}
+      {drawerOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden"
+            onClick={() => setDrawerOpen(false)}
+          />
+
+          {/* Drawer Panel */}
+          <div className="fixed top-0 right-0 h-full w-[280px] bg-[#0d0a2e]/95 backdrop-blur-xl border-l border-white/10 z-[70] lg:hidden flex flex-col">
+            {/* Header */}
+            <div className="flex items-center justify-between p-5 border-b border-white/10">
+              <Image
+                width={100}
+                height={100}
+                src="/assets/logo.png"
+                alt="Logo"
+                className="w-10 h-6"
+              />
+              <button
+                onClick={() => setDrawerOpen(false)}
+                aria-label="Close menu"
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-300"
+              >
+                <LuX size={18} />
+              </button>
+            </div>
+
+            {/* Nav Links */}
+            <nav className="flex-1 p-5 overflow-y-auto">
+              <div className="flex flex-col gap-1">
+                {navItems.map(({ label, sectionId }) => (
+                  <button
+                    key={label}
+                    onClick={() => handleNavClick(sectionId)}
+                    className={`w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 cursor-pointer ${
+                      activeSection === sectionId && isHomePage
+                        ? "bg-linear-to-r from-violet-400 to-pink-500 text-white"
+                        : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </nav>
+
+            {/* Footer - Hire Me */}
+            <div className="p-5 border-t border-white/10">
+              <Link
+                href="https://www.linkedin.com/in/atik-hasan-sarker/"
+                target="_blank"
+                className="block"
+                onClick={handleHireMeClick}
+              >
+                <Button
+                  className="w-full bg-linear-to-r from-violet-400 to-pink-500 hover:scale-[1.02] transition-all duration-300"
+                  size="lg"
+                >
+                  Hire Me <LuArrowRight />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
     </header>
   );
 }

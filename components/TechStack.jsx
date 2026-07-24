@@ -8,6 +8,14 @@ import {
     SiMongodb,
     SiExpress,
     SiGithub,
+    SiTypescript,
+    SiHeroui,
+    SiShadcnui,
+    SiFramer,
+    SiBetterauth,
+    SiFigma,
+    SiFirebase,
+    SiVercel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -40,6 +48,10 @@ const techStack = [
         icon: SiJavascript,
     },
     {
+        name: "TypeScript",
+        icon: SiTypescript,
+    },
+    {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
     },
@@ -58,6 +70,34 @@ const techStack = [
     {
         name: "GitHub",
         icon: SiGithub,
+    },
+    {
+        name: "HeroUI",
+        icon: SiHeroui,
+    },
+    {
+        name: "shadcn/ui",
+        icon: SiShadcnui,
+    },
+    {
+        name: "Framer Motion",
+        icon: SiFramer,
+    },
+    {
+        name: "better-auth",
+        icon: SiBetterauth,
+    },
+    {
+        name: "Figma",
+        icon: SiFigma,
+    },
+    {
+        name: "Firebase",
+        icon: SiFirebase,
+    },
+    {
+        name: "Vercel",
+        icon: SiVercel,
     },
 ];
 

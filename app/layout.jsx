@@ -1,6 +1,9 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -28,7 +31,12 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${poppins.variable} relative min-h-screen text-white transition-colors duration-300`}>
         <Cursor />
-        {children}
+        <BackgroundAnimation />
+        <div className="relative z-20">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

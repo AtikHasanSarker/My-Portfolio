@@ -52,10 +52,11 @@ export default function Contact() {
               <a
                 href="mailto:atiksagor24@gmail.com"
                 target="_blank"
-                className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl"
+                aria-label="Send email"
+                className="p-2 pl-4 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_20px_rgba(167,139,250,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(167,139,250,0.5)] transition-all duration-300 flex md:gap-4 items-center md:text-xl"
               >
-                <span className="p-2">SEND EMAIL</span>
-                <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
+                <span className="p-2 text-white font-semibold">SEND EMAIL</span>
+                <span className="rounded-full py-[13px] px-4 bg-white/20 backdrop-blur-sm text-white">
                   <i className="fa-solid fa-arrow-right-long"></i>
                 </span>
               </a>
@@ -74,9 +75,13 @@ export default function Contact() {
               </p>
             </div>
             <div className="flex justify-center">
-              <a href="tel:01768626650" className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl">
-                <span className="p-2">CONTACT </span>
-                <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
+              <a
+                href="tel:01768626650"
+                aria-label="Call now"
+                className="p-2 pl-4 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_20px_rgba(167,139,250,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(167,139,250,0.5)] transition-all duration-300 flex md:gap-4 items-center md:text-xl"
+              >
+                <span className="p-2 text-white font-semibold">CONTACT</span>
+                <span className="rounded-full py-[13px] px-4 bg-white/20 backdrop-blur-sm text-white">
                   <i className="fa-solid fa-arrow-right-long"></i>
                 </span>
               </a>
@@ -98,10 +103,11 @@ export default function Contact() {
               <a
                 href="https://wa.me/8801521791091"
                 target="_blank"
-                className="p-2 pl-4 border hover:scale-105 transition-all duration-300 border-[#F1F1F1] rounded-full bg-[#d9d9d967] flex md:gap-4 items-center md:text-xl"
+                aria-label="Message on WhatsApp"
+                className="p-2 pl-4 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_20px_rgba(167,139,250,0.3)] hover:scale-105 hover:shadow-[0_0_30px_rgba(167,139,250,0.5)] transition-all duration-300 flex md:gap-4 items-center md:text-xl"
               >
-                <span className="p-2">TEXT NOW</span>
-                <span className="rounded-full py-[13px] px-4 bg-[#F1F1F1] shadow-[0_0_20px_rgba(255,255,255,0.8)] text-[#595959]">
+                <span className="p-2 text-white font-semibold">TEXT NOW</span>
+                <span className="rounded-full py-[13px] px-4 bg-white/20 backdrop-blur-sm text-white">
                   <i className="fa-solid fa-arrow-right-long"></i>
                 </span>
               </a>
