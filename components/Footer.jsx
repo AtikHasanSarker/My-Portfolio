@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#000c3364] mt-25 p-10 md:p-14 text-white">
+    <footer className="bg-[#000c3364] mt-15 p-10 md:p-14 text-white">
       <div className="flex flex-col lg:flex-row gap-8 md:gap-30 justify-center">
         <div>
           <Image
@@ -15,11 +15,11 @@ export default function Footer() {
           <h1 className="bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-2xl font-black text-transparent mb-5">
             {"<Atik Hasan Sarker />"}
           </h1>
-          <p className="text-sm text-gray-400">© Copyright 2026</p>
+          <p className="text-sm text-gray-300">© Copyright 2026</p>
         </div>
         <div className="space-y-2.5">
           <h5 className="font-bold text-xl">Why trust us</h5>
-          <ul className="font-medium text-gray-400">
+          <ul className="font-medium text-gray-300">
             <li className="hover:text-white">Email</li>
             <li className="hover:text-white">Phone</li>
             <li className="hover:text-white">Linkedin</li>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
         <div className="space-y-[10px]">
           <h5 className="font-bold text-xl">Contact</h5>
-          <ul className="font-medium text-gray-400">
+          <ul className="font-medium text-gray-300">
             <li className="hover:text-white">Email</li>
             <li className="hover:text-white">Phone</li>
             <li className="hover:text-white">

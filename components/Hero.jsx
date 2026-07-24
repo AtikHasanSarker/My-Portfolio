@@ -35,12 +35,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="w-10/12 lg:w-9/12 mx-auto mt-12 md:mt-20">
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-      >
+    <section id="hero" className="max-w-6xl mx-auto px-6 mt-12 md:mt-20">
+      <motion.div variants={fadeUp} initial="hidden" animate="visible">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
           <Image
             src="/assets/atik.jpg"
@@ -50,7 +46,7 @@ export default function Hero() {
             height={250}
           />
           <div className="flex-1">
-            <div className="flex justify-center mb-8">
+            <div className="pl:15 md:pl-40 mb-8">
               <AvailabilityBadge
                 status="available"
                 text="Open for opportunities"
@@ -62,17 +58,15 @@ export default function Hero() {
                 Atik Hasan
               </span>
             </h1>
-            <h3 className="py-6 text-3xl md:text-[42px] font-semibold">
+            <h3 className="py-4 text-3xl md:text-[42px] font-semibold">
               Full Stack Web Developer
             </h3>
-
-            <div className="flex mb-4">
-              <LocationBadge location="Noakhali, Bangladesh" />
-            </div>
-
             <p>
               <span className="text-xl" ref={typingRef}></span>
             </p>
+            <div className="flex mt-4">
+              <LocationBadge location="Noakhali, Bangladesh" />
+            </div>
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-10 pl:15 md:pl-40">
@@ -80,7 +74,7 @@ export default function Hero() {
                 href="https://github.com/AtikHasanSarker"
                 target="_blank"
                 aria-label="GitHub profile"
-                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-400 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
+                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
               >
                 <FaGithub size={20} />
               </a>
@@ -89,7 +83,7 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/atik-hasan-sarker"
                 target="_blank"
                 aria-label="LinkedIn profile"
-                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-400 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
+                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
               >
                 <FaLinkedin size={20} />
               </a>
@@ -98,7 +92,7 @@ export default function Hero() {
                 href="https://www.facebook.com/atiksagor24.50.80"
                 target="_blank"
                 aria-label="Facebook profile"
-                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-400 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
+                className="flex items-center justify-center w-11 h-11 rounded-full border border-white/15 bg-white/5 text-gray-300 hover:bg-linear-to-r hover:from-violet-400 hover:to-pink-500 hover:text-white hover:border-transparent hover:scale-110 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] transition-all duration-300"
               >
                 <FaFacebook size={20} />
               </a>
@@ -135,7 +129,7 @@ export default function Hero() {
         aria-label="Scroll down"
         className="flex flex-col items-center gap-2 mb-[80px] group"
       >
-        <span className="text-xs text-gray-400 group-hover:text-purple-300 transition-colors duration-300">
+        <span className="text-xs text-gray-300 group-hover:text-purple-300 transition-colors duration-300">
           Scroll Down
         </span>
         <ChevronDown className="w-6 h-6 text-purple-300 animate-[bounce_2s_ease-in-out_infinite]" />

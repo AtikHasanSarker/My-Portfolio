@@ -28,18 +28,30 @@ const cardItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+const PROJECTS_PER_PAGE = 6;
+
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
       : projects.filter((p) => p.category === activeCategory);
 
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
+  const hasLess = visibleCount > PROJECTS_PER_PAGE;
+
+  const handleCategoryChange = (cat) => {
+    setActiveCategory(cat);
+    setVisibleCount(PROJECTS_PER_PAGE);
+  };
+
   return (
     <section
       id="projects"
-      className="relative py-20 overflow-hidden text-white"
+      className="max-w-6xl mx-auto px-6 relative py-20 overflow-hidden text-white"
     >
       {/* Glow */}
       <div className="absolute top-40 left-1/2 -translate-x-1/2 w-125 h-125 bg-violet-700/20 blur-[140px] rounded-full" />
@@ -53,14 +65,14 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             Personal{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
 
-          <p className="text-gray-400 text-lg mt-5 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg mt-5 max-w-2xl mx-auto">
             Here are some of my featured projects built while exploring modern
             web technologies and UI design.
           </p>
@@ -78,11 +90,11 @@ export default function Projects() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => handleCategoryChange(cat)}
                 className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shrink-0 ${
                   activeCategory === cat
                     ? "bg-linear-to-r from-violet-400 to-pink-500 text-white shadow-[0_0_20px_rgba(167,139,250,0.3)]"
-                    : "border border-white/10 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
+                    : "border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 {cat}
@@ -98,9 +110,9 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-7"
         >
-          {filteredProjects.map((project) => (
+          {visibleProjects.map((project) => (
             <motion.div
               key={project.slug}
               variants={cardItem}
@@ -130,7 +142,7 @@ export default function Projects() {
               <div className="flex flex-col flex-1 p-5">
                 <h3 className="text-xl font-bold mb-2">{project.name}</h3>
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
                   {project.description}
                 </p>
 
@@ -160,7 +172,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Live preview of ${project.name}`}
-                    className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-300"
+                    className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
                   >
                     <ExternalLink size={18} />
                   </a>
@@ -171,7 +183,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`GitHub repo of ${project.name}`}
-                      className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
                     >
                       <SiGithub size={18} />
                     </a>
@@ -181,6 +193,33 @@ export default function Projects() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* See More / See Less */}
+        {(hasMore || hasLess) && (
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="flex justify-center mt-12"
+          >
+            {hasMore ? (
+              <button
+                onClick={() => setVisibleCount(filteredProjects.length)}
+                className="px-8 py-3 rounded-full bg-linear-to-r from-violet-400 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)]"
+              >
+                See More
+              </button>
+            ) : (
+              <button
+                onClick={() => setVisibleCount(PROJECTS_PER_PAGE)}
+                className="px-8 py-3 rounded-full border border-white/20 bg-white/5 text-gray-300 font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:text-white"
+              >
+                See Less
+              </button>
+            )}
+          </motion.div>
+        )}
 
         {/* Empty state */}
         {filteredProjects.length === 0 && (

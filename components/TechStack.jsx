@@ -15,7 +15,6 @@ import {
     SiBetterauth,
     SiFigma,
     SiFirebase,
-    SiVercel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -95,10 +94,6 @@ const techStack = [
         name: "Firebase",
         icon: SiFirebase,
     },
-    {
-        name: "Vercel",
-        icon: SiVercel,
-    },
 ];
 
 export default function TechStack() {
@@ -113,14 +108,14 @@ export default function TechStack() {
                   viewport={{ once: true, margin: "-100px" }}
                   className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                    <h2 className="text-3xl md:text-4xl font-bold">
                         Tech{" "}
                         <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                             Stack
                         </span>
                     </h2>
 
-                    <p className="text-gray-400 mt-4 text-lg">
+                    <p className="text-gray-300 mt-4 text-lg">
                         Tools & technologies I use
                     </p>
                 </motion.div>
@@ -131,7 +126,7 @@ export default function TechStack() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-100px" }}
-                  className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
                 >
                     {techStack.map((tech, index) => {
                         const Icon = tech.icon;

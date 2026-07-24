@@ -36,7 +36,7 @@ export default async function ProjectDetailPage({ params }) {
         {/* Back Link */}
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 mb-10"
+          className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 mb-10"
         >
           <ArrowLeft size={18} />
           <span className="text-sm font-medium">Back to Projects</span>
@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({ params }) {
         </h1>
 
         {/* Description */}
-        <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-3xl">
+        <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl">
           {project.fullDescription}
         </p>
 
@@ -143,7 +143,7 @@ export default async function ProjectDetailPage({ params }) {
         <div className="pt-8 border-t border-white/10">
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300"
           >
             <ArrowLeft size={18} />
             <span className="text-sm font-medium">Back to Projects</span>

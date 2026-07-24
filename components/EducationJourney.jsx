@@ -23,7 +23,7 @@ const educationData = [
     title: "Higher Secondary Certificate (HSC)",
     subtitle: "Completed (Session 2020-2021)",
     description:
-      "Completed HSC from Rangpur Govt. City College, and my background was Science.",
+      "Completed HSC from Rangpur Govt. City College with a strong academic results. My background was Science.",
   },
   {
     year: "2024 - Running",
@@ -52,16 +52,16 @@ export default function EducationJourney() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12 md:mb-20"
+          className="text-center mb-8 md:mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Education &{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
               Journey
             </span>
           </h2>
 
-          <p className="text-gray-400 mt-4 text-lg">
+          <p className="text-gray-300 mt-4 text-lg">
             My academic background and learning path
           </p>
         </motion.div>
@@ -98,7 +98,7 @@ export default function EducationJourney() {
                 <motion.div
                   variants={fadeUp}
                   key={index}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-5 md:p-10 transition-all duration-300 hover:border-violet-500/30 hover:bg-white/[0.06]"
+                  className="rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-5 md:p-10 transition-all duration-300 hover:border-violet-500/30 hover:bg-white/10"
                 >
                   <span className="text-pink-500 font-semibold text-sm tracking-wide">
                     {item.year}
@@ -108,11 +108,11 @@ export default function EducationJourney() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-400 mt-4">
+                  <p className="text-gray-300 mt-4">
                     {item.subtitle}
                   </p>
 
-                  <p className="text-gray-400 leading-8 mt-6">
+                  <p className="text-gray-300 leading-8 mt-6">
                     {item.description}
                   </p>
                 </motion.div>

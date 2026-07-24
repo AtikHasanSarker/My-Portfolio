@@ -7,7 +7,6 @@ import { Button } from "@heroui/react";
 import { LuArrowRight, LuMenu, LuX } from "react-icons/lu";
 
 const navItems = [
-  { label: "Home", sectionId: "hero" },
   { label: "About", sectionId: "about" },
   { label: "Skills", sectionId: "skills" },
   { label: "Projects", sectionId: "projects" },
@@ -111,13 +110,13 @@ export default function Navbar() {
   }, [isHomePage]);
 
   return (
-    <header id="home" className="w-11/12 mx-auto pt-4 sticky top-0 z-50">
+    <header id="home" className="max-w-7xl mx-auto px-8 pt-4 sticky top-0 z-50">
       <nav
-        className={`flex justify-between rounded-2xl w-full lg:w-[70%] mx-auto p-3 items-center backdrop-blur transition-all duration-300
+        className={`flex justify-between rounded-2xl w-full lg:w-[70%] mx-auto p-3 items-center backdrop-blur-lg transition-all duration-300
       ${scrolled ? "bg-[#f1f1f11a]" : ""}`}
       >
         <div className="flex gap-2 items-center">
-          <Link href="/">
+          <Link href="#">
             <Image
               width={100}
               height={100}
@@ -201,7 +200,7 @@ export default function Navbar() {
               <button
                 onClick={() => setDrawerOpen(false)}
                 aria-label="Close menu"
-                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-300"
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300"
               >
                 <LuX size={18} />
               </button>

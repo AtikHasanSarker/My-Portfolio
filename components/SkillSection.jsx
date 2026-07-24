@@ -35,7 +35,7 @@ export default function SkillsSection() {
       icon: <Code2 size={22} />,
       description:
         "Experienced frontend developer skilled in building modern and interactive interfaces using React, Next.js and Tailwind CSS.",
-      tech: ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind", "React", "Next.js"],
+      tech: ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind", "HeroUI", "React", "Next.js"],
       color: "from-violet-500 to-fuchsia-500",
     },
     {
@@ -78,14 +78,14 @@ export default function SkillsSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             My{" "}
             <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
               Expertise
             </span>
           </h2>
 
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
             Technologies and tools I use to build modern, scalable and beautiful
             digital experiences.
           </p>
