@@ -51,19 +51,19 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-6xl mx-auto px-6 relative py-16 overflow-hidden text-white scroll-mt-24"
+      className="max-w-6xl mx-auto px-5 relative py-16 overflow-hidden text-white scroll-mt-24"
     >
       {/* Glow */}
       <div className="absolute top-40 left-1/2 -translate-x-1/2 w-125 h-125 bg-violet-700/20 blur-[140px] rounded-full" />
 
-      <div className="relative z-10 w-11/12 mx-auto">
+      <div className="relative">
         {/* Heading */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             Personal{" "}
@@ -84,7 +84,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-8"
         >
           <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide px-2 -mx-2">
             {categories.map((cat) => (
@@ -125,10 +125,10 @@ export default function Projects() {
               <div className="relative overflow-hidden">
                 <Image
                   width={600}
-                  height={400}
+                  height={500}
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-52 object-cover transition duration-500 group-hover:scale-105"
+                  className="w-full h-65 object-cover transition duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
 

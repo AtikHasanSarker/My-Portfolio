@@ -8,7 +8,7 @@ const fadeUp = {
 
 export default function About() {
   return (
-    <section id="about" className="max-w-6xl mx-auto px-6 mb-10 md:mb-20 scroll-mt-24">
+    <section id="about" className="max-w-6xl mx-auto px-4 mb-10 md:mb-20 scroll-mt-24">
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -56,7 +56,7 @@ export default function About() {
             <p className="text-[#f1f1f199]">Project Completed</p>
           </div>
           <div className="p-10 bg-violet-950 rounded-xl">
-            <h3 className="text-[#F1F1F1] font-semibold text-4xl">+5</h3>
+            <h3 className="text-[#F1F1F1] font-semibold text-4xl">+3</h3>
             <p className="text-[#f1f1f199]">Certificate Received</p>
           </div>
         </div>

@@ -35,9 +35,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="max-w-6xl mx-auto px-6 mt-12 md:mt-20 scroll-mt-24">
+    <section id="hero" className="max-w-6xl mx-auto px-5 mt-12 md:mt-20 scroll-mt-24">
       <motion.div variants={fadeUp} initial="hidden" animate="visible">
-        <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
+        <div className="flex flex-col lg:flex-row-reverse gap-15 items-center">
           <Image
             src="/assets/atik.jpg"
             className="rounded-full shadow-2xl flex-1 max-w-[250px]"
@@ -46,20 +46,20 @@ export default function Hero() {
             height={250}
             priority
           />
-          <div className="flex-1">
-            <div className="pl:15 md:pl-40 mb-8">
+          <div className="flex-1 flex flex-col items-center">
+            <div className="mb-8">
               <AvailabilityBadge
                 status="available"
                 text="Open for opportunities"
               />
             </div>
-            <h1 className="font-bold text-5xl md:text-6xl">
+            <h1 className="font-bold text-[40px] md:text-[52px]">
               Hi, I&apos;m{" "}
               <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                 Atik Hasan
               </span>
             </h1>
-            <h3 className="py-4 text-3xl md:text-[42px] font-semibold">
+            <h3 className="py-4 text-[28px] md:text-4xl font-semibold">
               Full Stack Web Developer
             </h3>
             <p>
@@ -70,7 +70,7 @@ export default function Hero() {
             </div>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-4 mt-6 pl:15 md:pl-40">
+            <div className="flex gap-4 mt-6">
               <a
                 href="https://github.com/AtikHasanSarker"
                 target="_blank"
@@ -106,7 +106,7 @@ export default function Hero() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="flex justify-center my-6"
+        className="flex justify-center my-10"
       >
         <a
           href="#contact"
@@ -128,7 +128,7 @@ export default function Hero() {
         viewport={{ once: true, margin: "-100px" }}
         href="#about"
         aria-label="Scroll down"
-        className="flex flex-col items-center gap-2 mt-16 mb-25 group"
+        className="flex flex-col items-center gap-2 mt-15 mb-25 group"
       >
         <span className="text-xs text-gray-300 group-hover:text-purple-300 transition-colors duration-300">
           Scroll Down
