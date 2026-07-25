@@ -35,7 +35,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="max-w-6xl mx-auto px-5 mt-12 md:mt-20 scroll-mt-24">
+    <section
+      id="hero"
+      className="max-w-6xl mx-auto px-5 mt-12 md:mt-20 scroll-mt-24"
+    >
       <motion.div variants={fadeUp} initial="hidden" animate="visible">
         <div className="flex flex-col lg:flex-row-reverse gap-15 items-center">
           <Image
@@ -46,7 +49,7 @@ export default function Hero() {
             height={250}
             priority
           />
-          <div className="flex-1 flex flex-col items-center">
+          <div className="flex-1 flex flex-col items-center text-center">
             <div className="mb-8">
               <AvailabilityBadge
                 status="available"
@@ -54,13 +57,13 @@ export default function Hero() {
               />
             </div>
             <h1 className="font-bold text-[40px] md:text-[52px]">
-              Hi, I&apos;m{" "}
+              Hi, I&apos;m <br className="sm:hidden" />
               <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
                 Atik Hasan
               </span>
             </h1>
             <h3 className="py-4 text-[28px] md:text-4xl font-semibold">
-              Full Stack Web Developer
+              Full Stack <br className="sm:hidden" /> Web Developer
             </h3>
             <p>
               <span className="text-xl" ref={typingRef}></span>
