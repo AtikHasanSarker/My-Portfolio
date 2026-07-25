@@ -8,7 +8,7 @@ const fadeUp = {
 
 export default function About() {
   return (
-    <section id="about" className="max-w-6xl mx-auto px-6 mb-10 md:mb-20">
+    <section id="about" className="max-w-6xl mx-auto px-6 mb-10 md:mb-20 scroll-mt-24">
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -64,9 +64,9 @@ export default function About() {
           <a
             href="/Atik_Hasan_Resume.pdf"
             download="Atik_Hasan_Resume.pdf"
-            className="p-2 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_25px_rgba(167,139,250,0.3)] flex md:gap-4 items-center md:text-xl cursor-pointer hover:scale-105 hover:shadow-[0_0_40px_rgba(167,139,250,0.5)] transition-all duration-300"
+            className="p-2 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_25px_rgba(167,139,250,0.3)] flex items-center cursor-pointer hover:scale-105 hover:shadow-[0_0_40px_rgba(167,139,250,0.5)] transition-all duration-300"
           >
-            <span className="p-4 text-white font-semibold">
+            <span className="p-3 text-white font-semibold">
               DOWNLOAD RESUME
             </span>
             <span className="rounded-full py-[13px] px-4 bg-white/20 backdrop-blur-sm text-white">

@@ -98,7 +98,7 @@ const techStack = [
 
 export default function TechStack() {
     return (
-        <section className="py-20 text-white">
+        <section className="py-16 text-white">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}
                 <motion.div

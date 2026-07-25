@@ -46,7 +46,7 @@ const cards = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative py-16 overflow-hidden scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div

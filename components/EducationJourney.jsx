@@ -44,7 +44,7 @@ const educationData = [
 
 export default function EducationJourney() {
   return (
-    <section id="education" className="relative py-10 md:py-16 text-white">
+    <section id="education" className="relative py-10 md:py-16 text-white scroll-mt-24">
       <div className="max-w-6xl mx-auto px-3">
         {/* Heading */}
         <motion.div

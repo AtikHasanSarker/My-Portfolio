@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-6xl mx-auto px-6 relative py-20 overflow-hidden text-white"
+      className="max-w-6xl mx-auto px-6 relative py-16 overflow-hidden text-white scroll-mt-24"
     >
       {/* Glow */}
       <div className="absolute top-40 left-1/2 -translate-x-1/2 w-125 h-125 bg-violet-700/20 blur-[140px] rounded-full" />
@@ -105,7 +105,7 @@ export default function Projects() {
 
         {/* Project Grid */}
         <motion.div
-          key={activeCategory}
+          key={`${activeCategory}-${visibleCount}`}
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -206,9 +206,9 @@ export default function Projects() {
             {hasMore ? (
               <button
                 onClick={() => setVisibleCount(filteredProjects.length)}
-                className="px-8 py-3 rounded-full bg-linear-to-r from-violet-400 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)]"
+                className="px-8 py-3 group flex items-center gap-2 rounded-full bg-linear-to-r from-violet-400 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)]"
               >
-                See More
+                See More <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             ) : (
               <button

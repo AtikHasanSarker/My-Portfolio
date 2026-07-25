@@ -1,22 +1,7 @@
 "use client";
 
-import Lenis from "lenis";
-import { useEffect } from "react";
-
+// Lenis disabled — it conflicts with JS scrollIntoView() in the Navbar.
+// Smooth scrolling is handled per-call via behavior: 'smooth' in scrollTo().
 export default function SmoothScroll() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.5,
-      smoothWheel: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return null;
 }

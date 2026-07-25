@@ -68,7 +68,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="max-w-6xl mx-auto text-white pb-20 px-3 md:px-10">
+    <section id="skills" className="max-w-6xl mx-auto text-white pb-20 px-3 md:px-10 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-3">
         {/* Heading */}
         <motion.div

@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="max-w-6xl mx-auto px-6 mt-12 md:mt-20">
+    <section id="hero" className="max-w-6xl mx-auto px-6 mt-12 md:mt-20 scroll-mt-24">
       <motion.div variants={fadeUp} initial="hidden" animate="visible">
         <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
           <Image
@@ -44,6 +44,7 @@ export default function Hero() {
             alt="Atik Hasan"
             width={250}
             height={250}
+            priority
           />
           <div className="flex-1">
             <div className="pl:15 md:pl-40 mb-8">
@@ -69,7 +70,7 @@ export default function Hero() {
             </div>
 
             {/* SOCIAL ICONS */}
-            <div className="flex gap-4 mt-10 pl:15 md:pl-40">
+            <div className="flex gap-4 mt-6 pl:15 md:pl-40">
               <a
                 href="https://github.com/AtikHasanSarker"
                 target="_blank"
@@ -105,17 +106,17 @@ export default function Hero() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="flex justify-center my-[85px]"
+        className="flex justify-center my-6"
       >
         <a
           href="#contact"
           aria-label="Contact me"
-          className="p-2 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shadow-[0_0_25px_rgba(167,139,250,0.4)] flex md:gap-4 items-center md:text-xl group relative cursor-pointer hover:scale-105 hover:shadow-[0_0_40px_rgba(167,139,250,0.6)] transition-all duration-300"
+          className="p-2 rounded-full bg-linear-to-r font-semibold from-violet-400 to-pink-500 shadow-[0_0_25px_rgba(167,139,250,0.4)] flex items-center group relative cursor-pointer hover:scale-105 hover:shadow-[0_0_40px_rgba(167,139,250,0.6)] transition-all duration-300"
         >
-          <span className="p-4 relative right-1 transition-all duration-300 group-hover:left-[28%]">
+          <span className="p-3 relative right-1 transition-all duration-300 group-hover:left-[28%]">
             CONTACT ME
           </span>
-          <span className="rounded-full py-[13px] px-4 bg-white/20 backdrop-blur-sm text-white relative right-1 transition-all duration-500 group-hover:right-[75%]">
+          <span className="rounded-full py-3 px-4 bg-white/20 backdrop-blur-sm text-white relative right-1 transition-all duration-500 group-hover:right-[70%]">
             <i className="fa-solid fa-mobile-screen-button"></i>
           </span>
         </a>
@@ -127,7 +128,7 @@ export default function Hero() {
         viewport={{ once: true, margin: "-100px" }}
         href="#about"
         aria-label="Scroll down"
-        className="flex flex-col items-center gap-2 mb-[80px] group"
+        className="flex flex-col items-center gap-2 mt-16 mb-25 group"
       >
         <span className="text-xs text-gray-300 group-hover:text-purple-300 transition-colors duration-300">
           Scroll Down
