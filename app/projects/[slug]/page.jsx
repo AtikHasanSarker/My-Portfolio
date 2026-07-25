@@ -192,7 +192,7 @@ export default async function ProjectDetailPage({ params }) {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 font-medium"
             >
               <SiGithub size={18} />
-              GitHub
+              GitHub Repository
             </a>
           )}
         </div>

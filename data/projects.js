@@ -5,7 +5,7 @@ export const projects = [
     image: "/assets/Projects/lifedrop.png",
     link: "https://lifedrop-client-cyan.vercel.app/",
     github: "https://github.com/AtikHasanSarker/lifedrop-client",
-    category: "Full Stack",
+    category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:
       "A modern blood donation platform that connects voluntary blood donors with patients in need, helping save lives through technology and community.",
@@ -44,7 +44,7 @@ export const projects = [
     image: "/assets/Projects/mediqueue.png",
     link: "https://mediqueue-ruby-seven.vercel.app/",
     github: "https://github.com/AtikHasanSarker/mediqueue-client",
-    category: "Full Stack",
+    category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:
       "A tutor-booking and mentorship platform connecting students with expert tutors across career, business, tech, and personal development.",
@@ -82,7 +82,7 @@ export const projects = [
     image: "/assets/Projects/skillsphere.png",
     link: "https://skillsphere-rho.vercel.app/",
     github: "https://github.com/AtikHasanSarker/skillsphere",
-    category: "Full Stack",
+    category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:
       "An online learning platform offering expert-led courses, instructor profiles, and skill-building content across development, marketing, and more.",
@@ -120,7 +120,7 @@ export const projects = [
     image: "/assets/Projects/evenza.png",
     link: "https://evenza-client.vercel.app/",
     github: "#",
-    category: "Full Stack",
+    category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:
       "An all-in-one event discovery and management platform for exploring, publishing, and managing events like conferences, workshops, and festivals.",
@@ -158,7 +158,7 @@ export const projects = [
     image: "/assets/Projects/buildwise.png",
     link: "https://buildwise-ai-client.vercel.app/",
     github: "https://github.com/AtikHasanSarker/buildwise-ai-client",
-    category: "Full Stack",
+    category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:
       "An AI-powered PC build marketplace that helps users find compatible components, optimize their budget, and build the perfect PC setup.",
@@ -203,7 +203,7 @@ export const projects = [
     image: "/assets/Projects/English-Janala.png",
     link: "https://atikhasansarker.github.io/English-Janala/",
     github: "https://github.com/AtikHasanSarker/English-Janala",
-    category: "Frontend",
+    category: "React",
     badge: "Practice Project",
     description:
       "Interactive English learning platform with vocabulary, lessons and responsive UI design.",
@@ -225,7 +225,7 @@ export const projects = [
     link: "https://pixgen-lake.vercel.app/",
     github: "https://github.com/AtikHasanSarker/pixgen",
     category: "React",
-    badge: "Full Stack Project",
+    badge: "Practice Project",
     description:
       "HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.",
     fullDescription:
@@ -241,13 +241,7 @@ export const projects = [
   },
 ];
 
-export const categories = [
-  "All",
-  "Full Stack",
-  "Frontend",
-  "React",
-  "Next.js",
-];
+export const categories = ["All", "Full Stack", "React", "Next.js"];
 
 export function getProjectBySlug(slug) {
   return projects.find((p) => p.slug === slug);

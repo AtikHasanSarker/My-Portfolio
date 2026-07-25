@@ -31,7 +31,7 @@ export default function About() {
         className="space-y-8 text-center p-5 md:px-15 md:py-12 bg-[#352f651a] rounded-3xl"
       >
         <p className="text-justify">
-          I'm a passionate Full Stack Web Developer specializing in the MERN
+          I am a passionate Full Stack Web Developer specializing in the MERN
           stack (MongoDB, Express.js, React, Node.js). My programming journey
           started with curiosity about how websites work, and over time I
           developed strong skills in building complete web applications — from
