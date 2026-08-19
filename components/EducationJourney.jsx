@@ -75,16 +75,16 @@ export default function EducationJourney() {
           className="relative"
         >
           {/* Vertical Line */}
-          <div className="absolute left-3 top-0 h-full w-[2px] bg-white/40"></div>
+          <div className="absolute left-3 top-0 h-full w-[2px] bg-foreground"></div>
 
           <div className="space-y-12">
             {educationData.map((item, index) => (
               <div key={index} className="relative pl-12 md:pl-16">
                 {/* Dot */}
-                <div className="absolute -left-1 top-1">
+                <div className="absolute -left-1 top-0">
                   <div className="relative flex items-center justify-center">
-                    <div className="w-fit p-2 rounded-full bg-pink-500">
-                      <div className="text-xl">
+                    <div className="w-fit p-2 rounded-full bg-foreground">
+                      <div className="text-xl text-background">
                         <RiGraduationCapFill />
                       </div>
                     </div>
@@ -98,7 +98,7 @@ export default function EducationJourney() {
                   key={index}
                   className="theme-card rounded-[28px] backdrop-blur-md p-5 md:p-10 transition-all duration-300"
                 >
-                  <span className="text-white font-semibold text-sm tracking-wide">
+                  <span className="font-semibold text-sm tracking-wide">
                     {item.year}
                   </span>
 

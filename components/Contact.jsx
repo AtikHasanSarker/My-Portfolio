@@ -114,7 +114,7 @@ export default function Contact() {
               aria-label={card.ariaLabel}
             >
               {/* Icon */}
-              <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-violet-400/10 to-pink-500/10 border border-white/6 text-violet-400 transition-all duration-400 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]">
+              <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-2xl transition-all duration-400 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(167,139,250,0.2)]">
                 {card.icon}
               </div>
 

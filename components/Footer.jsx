@@ -210,8 +210,8 @@ export default function Footer() {
               Reserved.
             </p>
             <p>
-              Designed &amp; Developed with <span>&hearts;</span> using Next.js,
-              React, Tailwind CSS &amp; Framer Motion
+              Designed &amp; Developed with <span>&hearts;</span>
+              {" using Next.js, React, Tailwind CSS & Framer Motion"}
             </p>
           </div>
         </div>

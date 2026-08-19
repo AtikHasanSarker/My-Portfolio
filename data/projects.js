@@ -79,7 +79,7 @@ export const projects = [
   {
     slug: "skillsphere",
     name: "SkillSphere",
-    image: "/assets/Projects/skillsphere.png",
+    image: "/assets/Projects/Skillsphere.png",
     link: "https://skillsphere-rho.vercel.app",
     github: "https://github.com/AtikHasanSarker/skillsphere",
     category: ["Full Stack", "Next.js"],
@@ -119,7 +119,7 @@ export const projects = [
     name: "Evenza",
     image: "/assets/Projects/evenza.png",
     link: "https://evenza-client.vercel.app/",
-    github: "#",
+    github: "https://github.com/AtikHasanSarker/evenza-client",
     category: ["Full Stack", "Next.js"],
     badge: "Full Stack Project",
     description:

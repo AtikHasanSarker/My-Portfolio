@@ -20,8 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-      </head>
+      <head></head>
       <body
         className={`${poppins.variable} relative min-h-screen transition-colors duration-300`}
       >
