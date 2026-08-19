@@ -18,7 +18,7 @@ export default function AvailabilityBadge({
           }`}
         />
       </span>
-      <span className="text-sm text-gray-300">{isAvailable ? text : "Not available"}</span>
+      <span className="text-sm">{isAvailable ? text : "Not available"}</span>
     </div>
   );
 }

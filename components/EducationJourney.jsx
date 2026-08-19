@@ -44,8 +44,8 @@ const educationData = [
 
 export default function EducationJourney() {
   return (
-    <section id="education" className="relative py-10 md:py-16 text-white scroll-mt-24">
-      <div className="max-w-6xl mx-auto px-3">
+    <section id="education" className="relative py-10 md:py-16 scroll-mt-16">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <motion.div
           variants={fadeUp}
@@ -56,12 +56,12 @@ export default function EducationJourney() {
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Education &{" "}
-            <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="font-semibold">
               Journey
             </span>
           </h2>
 
-          <p className="text-gray-300 mt-4 text-lg">
+          <p className="mt-4 text-lg">
             My academic background and learning path
           </p>
         </motion.div>
@@ -75,13 +75,13 @@ export default function EducationJourney() {
           className="relative"
         >
           {/* Vertical Line */}
-          <div className="absolute left-3 top-0 h-full w-[2px] bg-linear-to-b from-violet-500/60 to-transparent"></div>
+          <div className="absolute left-3 top-0 h-full w-[2px] bg-white/40"></div>
 
           <div className="space-y-12">
             {educationData.map((item, index) => (
               <div key={index} className="relative pl-12 md:pl-16">
                 {/* Dot */}
-                <div className="absolute left-0 top-5">
+                <div className="absolute -left-1 top-1">
                   <div className="relative flex items-center justify-center">
                     <div className="w-fit p-2 rounded-full bg-pink-500">
                       <div className="text-xl">
@@ -89,8 +89,6 @@ export default function EducationJourney() {
                       </div>
                     </div>
 
-                    {/* Glow */}
-                    <div className="absolute w-5 h-5 rounded-full bg-violet-500 blur-md opacity-70"></div>
                   </div>
                 </div>
 
@@ -98,9 +96,9 @@ export default function EducationJourney() {
                 <motion.div
                   variants={fadeUp}
                   key={index}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-5 md:p-10 transition-all duration-300 hover:border-violet-500/30 hover:bg-white/10"
+                  className="theme-card rounded-[28px] backdrop-blur-md p-5 md:p-10 transition-all duration-300"
                 >
-                  <span className="text-pink-500 font-semibold text-sm tracking-wide">
+                  <span className="text-white font-semibold text-sm tracking-wide">
                     {item.year}
                   </span>
 
@@ -108,11 +106,11 @@ export default function EducationJourney() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-300 mt-4">
+                  <p className="mt-4">
                     {item.subtitle}
                   </p>
 
-                  <p className="text-gray-300 leading-8 mt-6">
+                  <p className="leading-8 mt-6">
                     {item.description}
                   </p>
                 </motion.div>

@@ -28,15 +28,12 @@ export default async function ProjectDetailPage({ params }) {
   }
 
   return (
-    <section className="relative min-h-screen py-16 overflow-hidden text-white">
-      {/* Background glow */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-violet-700/15 blur-[120px] rounded-full" />
-
+    <section className="relative min-h-screen py-16 overflow-hidden">
       <div className="relative z-10 w-11/12 max-w-4xl mx-auto">
         {/* Back Link */}
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 mb-10"
+          className="inline-flex items-center gap-2 transition-colors duration-300 mb-10"
         >
           <ArrowLeft size={18} />
           <span className="text-sm font-medium">Back to Projects</span>
@@ -58,7 +55,7 @@ export default async function ProjectDetailPage({ params }) {
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl">
+        <p className="text-lg leading-relaxed mb-8 max-w-3xl">
           {project.fullDescription}
         </p>
 
@@ -66,7 +63,7 @@ export default async function ProjectDetailPage({ params }) {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-5">
             Tech{" "}
-            <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="font-semibold">
               Stack
             </span>
           </h2>
@@ -74,7 +71,7 @@ export default async function ProjectDetailPage({ params }) {
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300"
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm"
               >
                 {tag}
               </span>
@@ -86,13 +83,13 @@ export default async function ProjectDetailPage({ params }) {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-5">
             Key{" "}
-            <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="font-semibold">
               Features
             </span>
           </h2>
           <ul className="space-y-3">
             {project.features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-gray-300">
+              <li key={idx} className="flex items-start gap-3">
                 <CheckCircle
                   size={18}
                   className="text-violet-400 mt-0.5 shrink-0"
@@ -108,13 +105,13 @@ export default async function ProjectDetailPage({ params }) {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-5">
               Key{" "}
-              <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="font-semibold">
                 Contributions
               </span>
             </h2>
             <ul className="space-y-3">
               {project.keyContributions.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-gray-300">
+                <li key={idx} className="flex items-start gap-3">
                   <CheckCircle
                     size={18}
                     className="text-violet-400 mt-0.5 shrink-0"
@@ -131,13 +128,13 @@ export default async function ProjectDetailPage({ params }) {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-5">
               Challenges{" "}
-              <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="font-semibold">
                 Faced
               </span>
             </h2>
             <ul className="space-y-3">
               {project.challengesFaced.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-gray-300">
+                <li key={idx} className="flex items-start gap-3">
                   <CheckCircle
                     size={18}
                     className="text-violet-400 mt-0.5 shrink-0"
@@ -154,13 +151,13 @@ export default async function ProjectDetailPage({ params }) {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-5">
               Future{" "}
-              <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="font-semibold">
                 Plans
               </span>
             </h2>
             <ul className="space-y-3">
               {project.futurePlans.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-gray-300">
+                <li key={idx} className="flex items-start gap-3">
                   <CheckCircle
                     size={18}
                     className="text-violet-400 mt-0.5 shrink-0"
@@ -178,7 +175,7 @@ export default async function ProjectDetailPage({ params }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-violet-400 to-pink-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(167,139,250,0.35)]"
+            className="theme-button inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
           >
             <ExternalLink size={18} />
             Live Preview
@@ -189,7 +186,7 @@ export default async function ProjectDetailPage({ params }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 font-medium"
+              className="theme-icon-button inline-flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 font-medium"
             >
               <SiGithub size={18} />
               GitHub Repository
@@ -201,7 +198,7 @@ export default async function ProjectDetailPage({ params }) {
         <div className="pt-8 border-t border-white/10">
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300"
+            className="inline-flex items-center gap-2 transition-colors duration-300"
           >
             <ArrowLeft size={18} />
             <span className="text-sm font-medium">Back to Projects</span>

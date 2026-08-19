@@ -3,15 +3,32 @@
 import { useEffect, useState } from "react";
 
 export default function IntroLoader() {
+  const [shouldShow, setShouldShow] = useState(null);
   const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setHide(true);
-    }, 3000);
+    const hasSeenIntro = localStorage.getItem("portfolio-intro-seen");
 
-    return () => clearTimeout(timer);
+    if (hasSeenIntro) {
+      return;
+    }
+
+    let hideTimer;
+    const showTimer = setTimeout(() => {
+      localStorage.setItem("portfolio-intro-seen", "true");
+      setShouldShow(true);
+      hideTimer = setTimeout(() => {
+        setHide(true);
+      }, 3000);
+    }, 0);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
+
+  if (!shouldShow) return null;
 
   return (
     <div
@@ -22,15 +39,15 @@ export default function IntroLoader() {
       }`}
     >
       <div className="text-center">
-        <h1 className="bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-6xl font-black text-transparent">
+        <h1 className="text-6xl font-black">
           {"<Atik Hasan Sarker />"}
         </h1>
 
         <div className="mx-auto mt-6 h-[4px] w-48 overflow-hidden rounded-full bg-white/10">
-          <div className="h-full w-full animate- rounded-full bg-linear-to-r from-violet-500 to-pink-500" />
+          <div className="h-full w-full animate- rounded-full bg-white" />
         </div>
 
-        <p className="mt-8 text-sm tracking-[8px] text-white/70 uppercase">
+        <p className="mt-8 text-sm tracking-[8px] uppercase">
           Turning Ideas Into Interfaces
         </p>
       </div>

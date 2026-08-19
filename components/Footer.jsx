@@ -14,6 +14,7 @@ import {
   FaFacebook,
   FaWhatsapp,
 } from "react-icons/fa";
+import { useTheme } from "next-themes";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,17 +70,18 @@ const connectLinks = [
     icon: <FaWhatsapp className="w-4 h-4" />,
     target: true,
   },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/atiksagor24.50.80",
+    icon: <FaFacebook className="w-4 h-4" />,
+    target: true,
+  },
 ];
 
-const socials = [
-  { icon: <FaGithub className="w-4.5 h-4.5" />, href: "https://github.com/AtikHasanSarker", label: "GitHub" },
-  { icon: <FaLinkedin className="w-4.5 h-4.5" />, href: "https://www.linkedin.com/in/atik-hasan-sarker/", label: "LinkedIn" },
-  { icon: <FaFacebook className="w-4.5 h-4.5" />, href: "https://www.facebook.com/atiksagor24.50.80", label: "Facebook" },
-  { icon: <MdEmail className="w-4.5 h-4.5" />, href: "https://mail.google.com/mail/?view=cm&fs=1&to=atiksagor24@gmail.com", label: "Email" },
-  { icon: <FaWhatsapp className="w-4.5 h-4.5" />, href: "https://wa.me/8801521791091", label: "WhatsApp" },
-];
 
 export default function Footer() {
+  const { theme, resolvedTheme } = useTheme();
+
   const scrollTo = (href) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -87,13 +89,9 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-10">
-      {/* Top gradient divider */}
-      <div className="h-px bg-linear-to-r from-transparent via-violet-500/40 to-transparent" />
+      <div className="h-px" />
 
-      <div className="bg-[#0a0a14] relative overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/5 blur-[100px] rounded-full pointer-events-none" />
-
+      <div className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 pt-16 pb-8 relative z-10">
           {/* Main 4-column grid */}
           <motion.div
@@ -109,26 +107,30 @@ export default function Footer() {
                 <Image
                   width={200}
                   height={200}
-                  src="/assets/logo.png"
+                  src={
+                    theme === "dark"
+                      ? "/assets/logo-white.png"
+                      : "/assets/logo-black.png"
+                  }
                   alt="Logo"
                   className="w-20 h-10"
                 />
               </Link>
-              <h3 className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-xl font-bold text-transparent mb-3">
+              <h3 className="text-xl font-bold mb-3">
                 {"<Atik Hasan Sarker />"}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4">
+              <p className="text-sm leading-relaxed mb-4">
                 Full Stack Developer passionate about building scalable, modern
                 web applications with exceptional user experiences.
               </p>
-              <p className="text-xs text-violet-400/80 font-medium">
+              <p className="text-xs font-medium">
                 Available for Freelance Opportunities
               </p>
             </motion.div>
 
             {/* Column 2 — Quick Links */}
             <motion.div variants={staggerItem}>
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
+              <h4 className="font-bold text-sm uppercase tracking-wider mb-5">
                 Quick Links
               </h4>
               <ul className="space-y-3">
@@ -136,10 +138,10 @@ export default function Footer() {
                   <li key={link.label}>
                     <button
                       onClick={() => scrollTo(link.href)}
-                      className="group relative text-sm text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer"
+                      className="group relative text-sm transition-colors duration-300 cursor-pointer"
                     >
                       {link.label}
-                      <span className="absolute left-0 -bottom-1 h-px w-0 bg-linear-to-r from-violet-400 to-pink-500 transition-all duration-300 group-hover:w-full" />
+                      <span className="absolute left-0 -bottom-1 h-px w-0 bg-white transition-all duration-300 group-hover:w-full" />
                     </button>
                   </li>
                 ))}
@@ -148,7 +150,7 @@ export default function Footer() {
 
             {/* Column 3 — Let's Connect */}
             <motion.div variants={staggerItem}>
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
+              <h4 className="font-bold text-sm uppercase tracking-wider mb-5">
                 Let&apos;s Connect
               </h4>
               <ul className="space-y-3">
@@ -158,9 +160,9 @@ export default function Footer() {
                       href={link.href}
                       target={link.target ? "_blank" : undefined}
                       rel={link.target ? "noopener noreferrer" : undefined}
-                      className="group flex items-center gap-2.5 text-sm text-gray-400 hover:text-pink-400 transition-all duration-300 hover:translate-x-1"
+                      className="group flex items-center gap-2.5 text-sm transition-all duration-300 hover:translate-x-1"
                     >
-                      <span className="text-gray-500 group-hover:text-pink-400 transition-colors duration-300">
+                      <span className="transition-colors duration-300">
                         {link.icon}
                       </span>
                       {link.label}
@@ -172,16 +174,16 @@ export default function Footer() {
 
             {/* Column 4 — CTA */}
             <motion.div variants={staggerItem}>
-              <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
+              <h4 className="font-bold text-sm uppercase tracking-wider mb-5">
                 Interested in working together?
               </h4>
-              <p className="text-sm text-gray-400 leading-relaxed mb-6">
+              <p className="text-sm leading-relaxed mb-6">
                 Let&apos;s build something amazing together.
               </p>
               <div className="flex flex-col gap-3">
                 <button
                   onClick={() => scrollTo("#contact")}
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-violet-400 to-pink-500 text-white text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(167,139,250,0.25)] hover:shadow-[0_0_30px_rgba(167,139,250,0.45)] hover:brightness-110 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a14]"
+                  className="theme-button group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current"
                 >
                   Hire Me
                   <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -189,7 +191,7 @@ export default function Footer() {
                 <a
                   href="/Atik_Hasan_Resume.pdf"
                   download="Atik_Hasan_Resume.pdf"
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-sm font-semibold transition-all duration-300 hover:bg-white/10 hover:text-white hover:border-white/20 hover:shadow-[0_0_20px_rgba(167,139,250,0.1)] active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a14]"
+                  className="theme-icon-button group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current"
                 >
                   <Download className="w-4 h-4" />
                   Download Resume
@@ -198,39 +200,19 @@ export default function Footer() {
             </motion.div>
           </motion.div>
 
-          {/* Social icons row */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex justify-center gap-3 mb-10"
-          >
-            {socials.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                title={s.label}
-                className="group flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:scale-110 hover:text-white hover:bg-white/10 hover:border-violet-400/30 hover:shadow-[0_0_15px_rgba(167,139,250,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </motion.div>
-
           {/* Divider */}
           <div className="h-px bg-white/[0.06] mb-8" />
 
           {/* Bottom bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
             <p>
               &copy; {new Date().getFullYear()} Atik Hasan Sarker. All Rights
               Reserved.
             </p>
-            <p>Designed &amp; Developed with <span className="text-pink-400">&hearts;</span> using Next.js, React, Tailwind CSS &amp; Framer Motion</p>
+            <p>
+              Designed &amp; Developed with <span>&hearts;</span> using Next.js,
+              React, Tailwind CSS &amp; Framer Motion
+            </p>
           </div>
         </div>
       </div>

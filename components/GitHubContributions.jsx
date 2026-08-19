@@ -8,19 +8,32 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 // These MUST match the grid CSS classes exactly
 const CELL_SIZE = 16; // w-4 = 16px
-const CELL_GAP = 4;  // gap-1 = 4px
+const CELL_GAP = 4; // gap-1 = 4px
 const CELL_STRIDE = CELL_SIZE + CELL_GAP; // 20px total per column
 
 function getContributionColor(count) {
-  if (count === 0) return "bg-white/5";
-  if (count <= 3) return "bg-emerald-900/80";
-  if (count <= 6) return "bg-emerald-700/80";
-  if (count <= 9) return "bg-emerald-500/80";
-  return "bg-emerald-400";
+  if (count === 0) return "contribution-empty";
+  if (count <= 3) return "bg-green-300";
+  if (count <= 6) return "bg-green-400";
+  if (count <= 9) return "bg-green-600";
+  return "bg-green-800";
 }
 
 function getMonthLabels(weeks) {
@@ -53,7 +66,7 @@ export default function GitHubContributions() {
     async function fetchContributions() {
       try {
         const res = await fetch(
-          `/api/github-contributions?year=${currentYear}`
+          `/api/github-contributions?year=${currentYear}`,
         );
         const json = await res.json();
 
@@ -74,7 +87,7 @@ export default function GitHubContributions() {
 
   if (loading) {
     return (
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 py-12">
         <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 animate-pulse">
           <div className="h-6 w-48 bg-white/10 rounded mb-6" />
           <div className="h-32 bg-white/5 rounded" />
@@ -92,31 +105,28 @@ export default function GitHubContributions() {
   const gridWidth = weeks.length * CELL_STRIDE - CELL_GAP;
 
   return (
-    <section className="max-w-6xl mx-auto px-6 pb-20">
+    <section className="max-w-6xl mx-auto px-4 pb-20">
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden"
+        className="theme-card rounded-2xl backdrop-blur-md overflow-hidden"
       >
         <div className="p-6">
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-5">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-linear-to-r from-violet-400 to-pink-500 shrink-0" />
-              <h3 className="text-xl font-bold text-white">
-                GitHub{" "}
-                <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
-                  Contributions
-                </span>
+              <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
+              <h3 className="text-xl font-bold">
+                GitHub <span className="font-semibold">Contributions</span>
               </h3>
             </div>
             <a
               href={`https://github.com/${username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-300 hover:text-violet-400 transition-colors"
+              className="text-sm transition-colors"
             >
               @{username}
             </a>
@@ -130,7 +140,7 @@ export default function GitHubContributions() {
                 {monthLabels.map((label, i) => (
                   <span
                     key={i}
-                    className="absolute text-gray-300 leading-none"
+                    className="absolute leading-none"
                     style={{ left: label.weekIndex * CELL_STRIDE }}
                   >
                     {label.month}
@@ -158,21 +168,21 @@ export default function GitHubContributions() {
           </div>
 
           {/* Contribution count */}
-          <p className="text-sm text-gray-300 mb-5">
-            <span className="text-white font-semibold">
+          <p className="text-sm mb-5">
+            <span className=" font-semibold">
               {totalContributions.toLocaleString()}
             </span>{" "}
             contributions in {year}
           </p>
 
           {/* Legend */}
-          <div className="flex items-center justify-end gap-1.5 mt-4 text-[10px] text-gray-500">
+          <div className="flex items-center justify-end gap-2 mt-4 text-[10px]">
             <span>Less</span>
-            <div className="w-4 h-4 rounded-xs bg-white/5" />
-            <div className="w-4 h-4 rounded-xs bg-emerald-900/80" />
-            <div className="w-4 h-4 rounded-xs bg-emerald-700/80" />
-            <div className="w-4 h-4 rounded-xs bg-emerald-500/80" />
-            <div className="w-4 h-4 rounded-xs bg-emerald-400" />
+            <div className="contribution-empty w-4 h-4 rounded-xs" />
+            <div className="w-4 h-4 rounded-xs bg-green-300" />
+            <div className="w-4 h-4 rounded-xs bg-green-400" />
+            <div className="w-4 h-4 rounded-xs bg-green-600" />
+            <div className="w-4 h-4 rounded-xs bg-green-800" />
             <span>More</span>
           </div>
         </div>

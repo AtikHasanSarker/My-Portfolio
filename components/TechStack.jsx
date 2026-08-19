@@ -1,21 +1,4 @@
 "use client";
-import {
-    SiReact,
-    SiNextdotjs,
-    SiJavascript,
-    SiTailwindcss,
-    SiNodedotjs,
-    SiMongodb,
-    SiExpress,
-    SiGithub,
-    SiTypescript,
-    SiHeroui,
-    SiShadcnui,
-    SiFramer,
-    SiBetterauth,
-    SiFigma,
-    SiFirebase,
-} from "react-icons/si";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -33,126 +16,115 @@ const staggerContainer = {
   },
 };
 
-const techStack = [
-    {
-        name: "React",
-        icon: SiReact,
-    },
-    {
-        name: "Next.js",
-        icon: SiNextdotjs,
-    },
-    {
-        name: "JavaScript",
-        icon: SiJavascript,
-    },
-    {
-        name: "TypeScript",
-        icon: SiTypescript,
-    },
-    {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-    },
-    {
-        name: "Node.js",
-        icon: SiNodedotjs,
-    },
-    {
-        name: "MongoDB",
-        icon: SiMongodb,
-    },
-    {
-        name: "Express.js",
-        icon: SiExpress,
-    },
-    {
-        name: "GitHub",
-        icon: SiGithub,
-    },
-    {
-        name: "HeroUI",
-        icon: SiHeroui,
-    },
-    {
-        name: "shadcn/ui",
-        icon: SiShadcnui,
-    },
-    {
-        name: "Framer Motion",
-        icon: SiFramer,
-    },
-    {
-        name: "better-auth",
-        icon: SiBetterauth,
-    },
-    {
-        name: "Figma",
-        icon: SiFigma,
-    },
-    {
-        name: "Firebase",
-        icon: SiFirebase,
-    },
+const skills = [
+  {
+    name: "React",
+    icon: "react",
+  },
+  {
+    name: "Next.js",
+    icon: "nextjs",
+  },
+  {
+    name: "JavaScript",
+    icon: "js",
+  },
+  {
+    name: "TypeScript",
+    icon: "ts",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "tailwind",
+  },
+  {
+    name: "Node.js",
+    icon: "nodejs",
+  },
+  {
+    name: "Express.js",
+    icon: "express",
+  },
+  {
+    name: "MongoDB",
+    icon: "mongodb",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "postgresql",
+  },
+  {
+    name: "Prisma",
+    icon: "prisma",
+  },
+  {
+    name: "Git",
+    icon: "git",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+  },
+  {
+    name: "Figma",
+    icon: "figma",
+  },
+
+  {
+    name: "Postman",
+    icon: "postman",
+  },
+
+  {
+    name: "Vercel",
+    icon: "vercel",
+  },
 ];
+
 
 export default function TechStack() {
     return (
-        <section className="py-16 text-white">
-            <div className="max-w-6xl mx-auto px-6">
-                {/* Heading */}
-                <motion.div
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="text-center mb-16"
-                >
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                        Tech{" "}
-                        <span className="bg-linear-to-r from-violet-400 to-pink-500 bg-clip-text text-transparent">
-                            Stack
-                        </span>
-                    </h2>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Heading */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Tech <span className="font-semibold">Stack</span>
+            </h2>
 
-                    <p className="text-gray-300 mt-4 text-lg">
-                        Tools & technologies I use
-                    </p>
-                </motion.div>
+            <p className="mt-4 text-lg">Tools & technologies I use</p>
+          </motion.div>
 
-                {/* Grid */}
-                <motion.div
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
-                >
-                    {techStack.map((tech, index) => {
-                        const Icon = tech.icon;
+          {/* Grid */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8"
+          >
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="theme-card p-5 rounded-xl flex flex-col items-center justify-center"
+              >
+                <img
+                  src={`https://skillicons.dev/icons?i=${skill.icon}`}
+                  alt={skill.name}
+                  className="w-12 h-12 mb-4"
+                />
 
-                        return (
-                          <div
-                            key={index}
-                            className="group rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-md p-8 flex flex-col items-center justify-center transition-all duration-300 hover:border-violet-500/30 hover:bg-white/10 hover:-translate-y-1 hover:scale-105"
-                          >
-                            {/* Icon */}
-                            <div className="mb-6 relative">
-                              <Icon className="text-violet-500 text-3xl transition-transform duration-300 group-hover:scale-110" />
-
-                              {/* Glow */}
-                              <div className="absolute inset-0 bg-violet-500/20 blur-2xl rounded-full"></div>
-                            </div>
-
-                            {/* Name */}
-                            <h3 className="font-semibold text-gray-200">
-                              {tech.name}
-                            </h3>
-                          </div>
-                        );
-                    })}
-                </motion.div>
-            </div>
-        </section>
+                <h3>{skill.name}</h3>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     );
 }
