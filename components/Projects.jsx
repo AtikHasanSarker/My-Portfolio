@@ -130,7 +130,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
 
                 {/* Badge Overlay */}
-                <span className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 text-xs font-medium">
+                <span className="absolute top-3 left-3 text-white px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 text-xs font-medium">
                   {project.badge}
                 </span>
               </div>
