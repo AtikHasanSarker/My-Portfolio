@@ -55,7 +55,7 @@ export default function SkillsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-14"
+          className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             My{" "}
@@ -64,7 +64,7 @@ export default function SkillsSection() {
             </span>
           </h2>
 
-          <p className="mt-4 max-w-2xl mx-auto">
+          <p className="mt-4 mx-auto">
             Technologies and tools I use to build modern, scalable and beautiful
             digital experiences.
           </p>

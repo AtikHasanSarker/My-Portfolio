@@ -96,7 +96,10 @@ export default function Navbar() {
   const { theme, resolvedTheme } = useTheme();
 
   return (
-    <header id="home" className="max-w-6xl w-full mx-auto px-4 pt-4 sticky top-0 z-50">
+    <header
+      id="home"
+      className="max-w-6xl w-full mx-auto px-4 pt-4 sticky top-0 z-50"
+    >
       <nav
         className={`flex justify-between rounded-2xl w-full border mx-auto p-3 items-center bg-background transition-all duration-300`}
       >
@@ -121,15 +124,6 @@ export default function Navbar() {
           <p className="text-xl">|</p>
         </Link>
 
-        {/* Hamburger */}
-        <button
-          className="lg:hidden flex items-center justify-center w-10 h-10"
-          onClick={() => setDrawerOpen(true)}
-          aria-label="Open menu"
-        >
-          <LuMenu className="w-6 h-6" />
-        </button>
-
         {/* Desktop Nav */}
         <div className="gap-10 hidden lg:flex items-center">
           {navItems.map(({ label, sectionId }) => (
@@ -144,7 +138,7 @@ export default function Navbar() {
             >
               {label}
               <span
-                className={`absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-300 ${
+                className={`absolute left-0 -bottom-1 h-0.5 bg-foreground transition-all duration-300 ${
                   activeSection === sectionId && isHomePage
                     ? "w-full"
                     : "w-0 group-hover:w-full"
@@ -155,11 +149,22 @@ export default function Navbar() {
         </div>
 
         {/* Hire Me */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <ThemeToggle />
+
+          {/* Hamburger */}
+          <button
+            className="lg:hidden flex items-center cursor-pointer justify-center w-10 h-10"
+            onClick={() => setDrawerOpen(true)}
+            aria-label="Open menu"
+          >
+            <LuMenu className="w-7 h-7" />
+          </button>
+
           <Link
             href="https://www.linkedin.com/in/atik-hasan-sarker/"
             target="_blank"
+            className="hidden lg:block"
           >
             <Button
               className="bg-foreground text-background hover:scale-105 transition-all duration-300 group"
@@ -176,22 +181,26 @@ export default function Navbar() {
       {drawerOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden"
+            className="fixed inset-0 backdrop-blur-sm z-[60] lg:hidden"
             onClick={() => setDrawerOpen(false)}
           />
-          <div className="fixed top-0 right-0 h-full w-[280px] bg-[#0d0a2e]/95 backdrop-blur-xl border-l border-white/10 z-[70] lg:hidden flex flex-col">
-            <div className="flex items-center justify-between p-5 border-b border-white/10">
+          <div className="fixed top-0 right-0 h-full w-[280px] bg-background border-l z-[70] lg:hidden flex flex-col">
+            <div className="flex items-center justify-between p-5 border-b">
               <Image
                 width={100}
                 height={100}
-                src="/assets/logo.png"
+                src={
+                  theme === "dark"
+                    ? "/assets/logo-white.png"
+                    : "/assets/logo-black.png"
+                }
                 alt="Logo"
                 className="w-10 h-6"
               />
               <button
                 onClick={() => setDrawerOpen(false)}
                 aria-label="Close menu"
-                className="theme-icon-button flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300"
+                className="theme-icon-button cursor-pointer flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300"
               >
                 <LuX size={18} />
               </button>
@@ -213,10 +222,7 @@ export default function Navbar() {
                 ))}
               </div>
             </nav>
-            <div className="p-5 border-t border-white/10">
-              <div className="mb-4 flex justify-center">
-                <ThemeToggle />
-              </div>
+            <div className="p-5 border-t">
               <Link
                 href="https://www.linkedin.com/in/atik-hasan-sarker/"
                 target="_blank"

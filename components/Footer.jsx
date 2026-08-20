@@ -200,11 +200,8 @@ export default function Footer() {
             </motion.div>
           </motion.div>
 
-          {/* Divider */}
-          <div className="h-px bg-white/[0.06] mb-8" />
-
           {/* Bottom bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex flex-col border-t pt-5 md:flex-row items-center justify-between gap-4 text-xs">
             <p>
               &copy; {new Date().getFullYear()} Atik Hasan Sarker. All Rights
               Reserved.
