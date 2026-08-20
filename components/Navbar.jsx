@@ -181,10 +181,10 @@ export default function Navbar() {
       {drawerOpen && (
         <>
           <div
-            className="fixed inset-0 backdrop-blur-sm z-[60] lg:hidden"
+            className="fixed inset-0 backdrop-blur-sm z-60 lg:hidden"
             onClick={() => setDrawerOpen(false)}
           />
-          <div className="fixed top-0 right-0 h-full w-[280px] bg-background border-l z-[70] lg:hidden flex flex-col">
+          <div className="fixed top-0 right-0 h-full w-70 bg-background border-l z-70 lg:hidden flex flex-col">
             <div className="flex items-center justify-between p-5 border-b">
               <Image
                 width={100}

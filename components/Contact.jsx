@@ -232,7 +232,7 @@ export default function Contact() {
                   }`}
                   placeholder="Enter your name"
                 />
-                <span id="name-error" className="min-h-[1.25rem] text-sm text-red-500">
+                <span id="name-error" className="min-h-5 text-sm text-red-500">
                   {errors.name || ""}
                 </span>
               </label>
@@ -254,7 +254,7 @@ export default function Contact() {
                   }`}
                   placeholder="Enter your email"
                 />
-                <span id="email-error" className="min-h-[1.25rem] text-sm text-red-500">
+                <span id="email-error" className="min-h-5 text-sm text-red-500">
                   {errors.email || ""}
                 </span>
               </label>
@@ -275,7 +275,7 @@ export default function Contact() {
                   }`}
                   placeholder="Tell me a little about your project..."
                 />
-                <span id="message-error" className="min-h-[1.25rem] text-sm text-red-500">
+                <span id="message-error" className="min-h-5 text-sm text-red-500">
                   {errors.message || ""}
                 </span>
               </label>

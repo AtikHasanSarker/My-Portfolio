@@ -69,7 +69,7 @@ export default function Projects() {
             </span>
           </h2>
 
-          <p className="text-lg mt-5 max-w-2xl mx-auto">
+          <p className="text-lg mt-5 mx-auto">
             Here are some of my featured projects built while exploring modern
             web technologies and UI design.
           </p>
