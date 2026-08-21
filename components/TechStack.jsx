@@ -50,6 +50,10 @@ const skills = [
     icon: "mongodb",
   },
   {
+    name: "Mongoose",
+    icon: "mongoose",
+  },
+  {
     name: "PostgreSQL",
     icon: "postgresql",
   },

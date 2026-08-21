@@ -83,12 +83,12 @@ export default function Projects() {
           viewport={{ once: true, margin: "-100px" }}
           className="flex justify-center mb-8"
         >
-          <div className="flex gap-3 overflow-x-auto bg-transparent">
+          <div className="flex gap-3 overflow-x-auto">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => handleCategoryChange(cat)}
-                className={`whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shrink-0 ${
+                className={`cursor-pointer whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shrink-0 ${
                   activeCategory === cat
                     ? "theme-button"
                     : "theme-icon-button"

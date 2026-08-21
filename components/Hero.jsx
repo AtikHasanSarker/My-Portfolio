@@ -73,8 +73,8 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href="/Atik_Hasan_Resume.pdf"
-                download="Atik_Hasan_Resume.pdf"
+                href="/Atik_Hasan_Sarker_Full_Stack_Developer_Resume.pdf"
+                download="Atik_Hasan_Sarker_Full_Stack_Developer_Resume.pdf"
                 className="bg-background text-foreground border px-4 py-3 rounded-full  cursor-pointer hover:scale-105 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">

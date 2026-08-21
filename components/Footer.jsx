@@ -88,8 +88,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative mt-10">
-      <div className="h-px" />
+    <footer className="relative mt-10 border-t">
 
       <div className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 pt-16 pb-8 relative z-10">
@@ -189,8 +188,8 @@ export default function Footer() {
                   <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
                 <a
-                  href="/Atik_Hasan_Resume.pdf"
-                  download="Atik_Hasan_Resume.pdf"
+                  href="/Atik_Hasan_Sarker_Full_Stack_Developer_Resume.pdf"
+                  download="Atik_Hasan_Sarker_Full_Stack_Developer_Resume.pdf"
                   className="theme-icon-button group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current"
                 >
                   <Download className="w-4 h-4" />

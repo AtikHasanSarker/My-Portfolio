@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { projects, getProjectBySlug } from "@/data/projects";
+import BackButton from "@/components/actions/BackButton";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -31,19 +32,13 @@ export default async function ProjectDetailPage({ params }) {
     <section className="relative min-h-screen py-16 overflow-hidden">
       <div className="relative z-10 w-11/12 max-w-4xl mx-auto">
         {/* Back Link */}
-        <Link
-          href="/#projects"
-          className="inline-flex items-center gap-2 transition-colors duration-300 mb-10"
-        >
-          <ArrowLeft size={18} />
-          <span className="text-sm font-medium">Back to Projects</span>
-        </Link>
+        <BackButton />
 
         {/* Title */}
         <h1 className="text-3xl md:text-4xl font-bold mb-6">{project.name}</h1>
 
         {/* Screenshot */}
-        <div className="relative rounded-4xl overflow-hidden border border-white/10 mb-12">
+        <div className="relative rounded-4xl overflow-hidden border mb-12">
           <Image
             width={900}
             height={500}
@@ -51,7 +46,7 @@ export default async function ProjectDetailPage({ params }) {
             alt={project.name}
             className="w-full h-auto object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 pointer-events-none" />
         </div>
 
         {/* Description */}
@@ -71,7 +66,7 @@ export default async function ProjectDetailPage({ params }) {
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm"
+                className="theme-card px-4 py-2 border rounded-full text-sm"
               >
                 {tag}
               </span>
@@ -195,14 +190,8 @@ export default async function ProjectDetailPage({ params }) {
         </div>
 
         {/* Bottom Back Link */}
-        <div className="pt-8 border-t border-white/10">
-          <Link
-            href="/#projects"
-            className="inline-flex items-center gap-2 transition-colors duration-300"
-          >
-            <ArrowLeft size={18} />
-            <span className="text-sm font-medium">Back to Projects</span>
-          </Link>
+        <div className="pt-8 border-t">
+          <BackButton />
         </div>
       </div>
     </section>
