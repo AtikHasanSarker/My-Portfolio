@@ -47,15 +47,15 @@ export default function About() {
           technologies to sharpen my skills.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-between">
-          <div className="theme-card p-10 rounded-xl">
+          <div className="theme-card p-10 rounded-xl hover:scale-105 transition-all duration-300">
             <h3 className="font-semibold text-4xl">+1</h3>
             <p>Year Experiences</p>
           </div>
-          <div className="theme-card p-10 rounded-xl">
+          <div className="theme-card p-10 rounded-xl hover:scale-105 transition-all duration-300">
             <h3 className="font-semibold text-4xl">+20</h3>
             <p>Project Completed</p>
           </div>
-          <div className="theme-card p-10 rounded-xl">
+          <div className="theme-card p-10 rounded-xl hover:scale-105 transition-all duration-300">
             <h3 className="font-semibold text-4xl">+3</h3>
             <p>Certificate Received</p>
           </div>

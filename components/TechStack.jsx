@@ -6,21 +6,12 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const skills = [
   {
     name: "React",
     icon: "react",
   },
+
   {
     name: "Next.js",
     icon: "nextjs",
@@ -50,8 +41,8 @@ const skills = [
     icon: "mongodb",
   },
   {
-    name: "Mongoose",
-    icon: "mongoose",
+    name: "Redux",
+    icon: "redux",
   },
   {
     name: "PostgreSQL",

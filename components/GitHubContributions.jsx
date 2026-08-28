@@ -117,7 +117,7 @@ export default function GitHubContributions() {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-5">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-white shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-foreground shrink-0" />
               <h3 className="text-xl font-bold">
                 GitHub <span className="font-semibold">Contributions</span>
               </h3>

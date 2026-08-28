@@ -70,20 +70,7 @@ export default function Achievement() {
         >
           <div className="relative w-full max-w-3xl">
             {/* Outer Frame */}
-            <div
-              className="
-                relative
-                rounded-3xl
-                p-2
-                bg-linear-to-br
-                from-purple-500/50
-                to-blue-500/50
-                hover:scale-102
-                transition-all
-                duration-300
-                hover:shadow-xl
-              "
-            >
+            <div className="relative rounded-3xl p-2 bg-linear-to-br from-purple-500/50 to-blue-500/50 hover:scale-102 transition-all duration-300 hover:shadow-xl">
               {/* Certificate Container */}
               <a
                 href="https://drive.google.com/file/d/1QYeKu8hXTXchPGxQU_WrxGbsdu6mlgNt/view?usp=sharing"
