@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import EducationJourney from "@/components/EducationJourney";
 import TechStack from "@/components/TechStack";
 import SkillsSection from "@/components/SkillSection";
+import Achievement from "@/components/Achievement";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Projects />
       <GitHubContributions />
       <EducationJourney />
+      <Achievement />
       <Contact />
     </main>
   );

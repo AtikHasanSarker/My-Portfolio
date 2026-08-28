@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { ChevronDown, DownloadIcon } from "lucide-react";
+import { DownloadIcon } from "lucide-react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
 import AvailabilityBadge from "./AvailabilityBadge";
