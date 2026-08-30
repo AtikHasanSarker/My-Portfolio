@@ -63,10 +63,7 @@ export default function Projects() {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold">
-            Personal{" "}
-            <span className="font-semibold">
-              Projects
-            </span>
+            Personal <span className="font-semibold">Projects</span>
           </h2>
 
           <p className="text-lg mt-5 mx-auto">
@@ -89,9 +86,7 @@ export default function Projects() {
                 key={cat}
                 onClick={() => handleCategoryChange(cat)}
                 className={`cursor-pointer whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 shrink-0 ${
-                  activeCategory === cat
-                    ? "theme-button"
-                    : "theme-icon-button"
+                  activeCategory === cat ? "theme-button" : "theme-icon-button"
                 }`}
               >
                 {cat}
@@ -203,14 +198,15 @@ export default function Projects() {
             {hasMore ? (
               <button
                 onClick={() => setVisibleCount(filteredProjects.length)}
-                className="theme-button px-8 py-3 group flex items-center gap-2 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+                className="theme-button cursor-pointer px-8 py-3 group flex items-center gap-2 rounded-full font-semibold transition-all duration-300 hover:scale-105"
               >
-                See More <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                See More{" "}
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             ) : (
               <button
                 onClick={() => setVisibleCount(PROJECTS_PER_PAGE)}
-                className="theme-icon-button px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+                className="theme-icon-button cursor-pointer px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
               >
                 See Less
               </button>

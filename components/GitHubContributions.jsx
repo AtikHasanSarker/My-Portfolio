@@ -133,7 +133,7 @@ export default function GitHubContributions() {
           </div>
 
           {/* Scrollable graph */}
-          <div className="overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
+          <div className="overflow-x-auto pb-2 -mx-2 px-2">
             <div style={{ minWidth: gridWidth + 24 }}>
               {/* Month labels row */}
               <div className="relative h-4 mb-2" style={{ width: gridWidth }}>
@@ -168,7 +168,7 @@ export default function GitHubContributions() {
           </div>
 
           {/* Contribution count */}
-          <p className="text-sm mb-5">
+          <p className="text-sm my-4">
             <span className=" font-semibold">
               {totalContributions.toLocaleString()}
             </span>{" "}
