@@ -42,7 +42,7 @@ body {
 }
 
 .theme-card {
-  background: var(--card-bg) !important;
+  background: var(--card-bg);
   border: 1px solid var(--card-border) !important;
   box-shadow: var(--card-shadow);
 }

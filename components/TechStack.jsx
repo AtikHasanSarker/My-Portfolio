@@ -107,7 +107,7 @@ export default function TechStack() {
             {skills.map((skill) => (
               <div
                 key={skill.name}
-                className="theme-card p-5 rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-all duration-300"
+                className="theme-card p-5 rounded-xl flex flex-col items-center justify-center hover:bg-blue-500 hover:scale-105 transition-all duration-300"
               >
                 <img
                   src={`https://skillicons.dev/icons?i=${skill.icon}`}

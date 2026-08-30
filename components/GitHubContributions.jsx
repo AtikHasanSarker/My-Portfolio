@@ -133,7 +133,7 @@ export default function GitHubContributions() {
           </div>
 
           {/* Scrollable graph */}
-          <div className="overflow-x-auto pb-2 -mx-2 px-2">
+          <div className="overflow-x-auto pb-2 -mx-2 px-2 md:scrollbar-hide">
             <div style={{ minWidth: gridWidth + 24 }}>
               {/* Month labels row */}
               <div className="relative h-4 mb-2" style={{ width: gridWidth }}>
