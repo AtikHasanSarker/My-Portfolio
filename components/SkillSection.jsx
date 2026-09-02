@@ -126,7 +126,7 @@ export default function SkillsSection() {
                 {item.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 rounded-full bg-white/10 text-sm border border-white/10"
+                    className="px-3 py-1 rounded-full bg-white/10 text-sm border"
                   >
                     {tech}
                   </span>
