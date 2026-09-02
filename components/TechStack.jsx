@@ -129,7 +129,7 @@ export default function TechStack() {
               display: none;
             }
           `}</style>
-          <Marquee speed={40} className="marquee-container">
+          <Marquee speed={30} gradient={false} className="marquee-container">
             {frontend.map((skill) => (
               <SkillCard key={skill.name} skill={skill} />
             ))}
@@ -145,7 +145,12 @@ export default function TechStack() {
           className="mb-6 overflow-hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <Marquee speed={40} direction="right" className="marquee-container">
+          <Marquee
+            speed={30}
+            gradient={false}
+            direction="right"
+            className="marquee-container"
+          >
             {backend.map((skill) => (
               <SkillCard key={skill.name} skill={skill} />
             ))}
