@@ -133,7 +133,7 @@ export default function GitHubContributions() {
           </div>
 
           {/* Scrollable graph */}
-          <div className="overflow-x-auto pb-2 -mx-2 px-2">
+          <div className="overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
             <div style={{ minWidth: gridWidth + 24 }}>
               {/* Month labels row */}
               <div className="relative h-4 mb-2" style={{ width: gridWidth }}>
@@ -176,7 +176,7 @@ export default function GitHubContributions() {
           </p>
 
           {/* Legend */}
-          <div className="flex items-center justify-end gap-2 mt-4 text-[10px]">
+          <div className="flex items-center justify-end gap-2 text-[10px]">
             <span>Less</span>
             <div className="contribution-empty w-4 h-4 rounded-xs" />
             <div className="w-4 h-4 rounded-xs bg-green-300" />

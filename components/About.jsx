@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-6xl mx-auto px-4 my-10 md:mt-30 md:mb-20 scroll-mt-24"
+      className="max-w-6xl mx-auto px-4 my-10 mt-20 md:mt-35 md:mb-20 scroll-mt-24"
     >
       <motion.div
         variants={fadeUp}

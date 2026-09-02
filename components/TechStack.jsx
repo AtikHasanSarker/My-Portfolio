@@ -30,6 +30,10 @@ const frontend = [
     icon: "tailwind",
   },
   {
+    name: "Bootstrap",
+    icon: "bootstrap",
+  },
+  {
     name: "Redux",
     icon: "redux",
   },
@@ -87,7 +91,7 @@ const backend = [
 export default function TechStack() {
   const SkillCard = ({ skill }) => (
     <div
-      className="theme-card p-6 rounded-xl flex flex-col items-center justify-center  hover:bg-purple-600 transition-all duration-300 w-32 h-32 mx-4"
+      className="theme-card p-6 rounded-xl flex flex-col items-center justify-center  hover:bg-purple-600 transition-all duration-300 w-40 h-32 mx-4"
     >
       <img
         src={`https://skillicons.dev/icons?i=${skill.icon}`}

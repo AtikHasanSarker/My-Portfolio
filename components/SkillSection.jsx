@@ -25,7 +25,17 @@ export default function SkillsSection() {
       icon: <Code2 size={22} />,
       description:
         "Experienced frontend developer skilled in building modern and interactive interfaces using React, Next.js and Tailwind CSS.",
-      tech: ["HTML", "CSS", "JavaScript", "TypeScript", "Tailwind", "HeroUI", "React", "Next.js"],
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+        "Hero UI",
+        "Shadcn UI",
+        "React",
+        "Next.js",
+      ],
       color: "from-violet-500 to-fuchsia-500",
     },
     {
@@ -33,7 +43,15 @@ export default function SkillsSection() {
       icon: <Server size={22} />,
       description:
         "Skilled in backend architecture, REST APIs, authentication systems and scalable database integration.",
-      tech: ["Node.js", "Express.js", "MongoDB","MySQL", "Firebase"],
+      tech: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "PorstgreSQL",
+        "Prisma",
+        "Postman",
+      ],
       color: "from-blue-500 to-cyan-500",
     },
     {
@@ -41,7 +59,7 @@ export default function SkillsSection() {
       icon: <Cloud size={22} />,
       description:
         "Experienced with deployment workflows, Vercel hosting, GitHub CI/CD and performance optimization.",
-      tech: ["Vercel","Surge", "Git", "Github", "Docker", "Netlify"],
+      tech: ["Git", "Github", "Vercel", "Surge", "Railway", "Netlify"],
       color: "from-pink-500 to-rose-500",
     },
   ];
