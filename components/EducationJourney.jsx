@@ -19,26 +19,26 @@ const staggerContainer = {
 
 const educationData = [
   {
+    year: "2024 - Present",
+    title: "Bachelor of Social Science (BSS)",
+    subtitle:
+      "Semester 4 | Session 2023–2024 | Noakhali Science and Technology University",
+    description:
+      "Currently pursuing a Bachelor of Social Science (BSS) in Information Science and Library Management at Noakhali Science and Technology University. Developing a strong foundation in information management, information retrieval, digital libraries, database management, and information systems. Alongside my academic studies, I am exploring data science, artificial intelligence, and modern web technologies to bridge the gap between information science and technology-driven solutions.",
+  },
+  {
+    year: "2025 - 2026",
+    title: "Complete Web Development",
+    subtitle: "Programming Hero | Batch 13 | Instructor: Jhankar Mahbub",
+    description:
+      "Completed the Complete Web Development course by Jhankar Mahbub through Programming Hero, gaining practical experience in modern web development. Built a strong foundation in HTML, CSS, JavaScript, responsive web design, React.js, Next.js, Node.js, Express.js, and MongoDB. Worked on real-world projects involving REST API integration, authentication, database operations, and full-stack application development. Continuously improving problem-solving skills, writing clean and maintainable code, and learning industry-standard development practices to build scalable, user-friendly web applications.",
+  },
+  {
     year: "2020 - 2022",
     title: "Higher Secondary Certificate (HSC)",
-    subtitle: "Completed (Session 2020-2021)",
+    subtitle: "Science | Rangpur Government City College | Session 2020–2021",
     description:
-      "Completed HSC from Rangpur Govt. City College with a strong academic results. My background was Science.",
-  },
-  {
-    year: "2024 - Running",
-    title:
-      "Bachelor of Social Science (BSS)",
-    subtitle: "Semester 4 (Session 2023-2024)",
-    description:
-      "Currently pursuing BSS in Information Science and Library Management, from Noakhali Science and Technology University, focusing information management, digital libraries, data science, and modern web technologies.",
-  },
-  {
-    year: "2025 - Running",
-    title: "Complete Web Development",
-    subtitle: "Jhankar Mahbub's Programming Hero Batch 13",
-    description:
-      "Currently pursuing Complete Web Development from Jhankar Mahbub's Programming Hero. Focusing on problem solving, modern web technologies. Learning full-stack development including frontend, backend development.Javascript, React, Node.js, Express.js, MongoDB,etc.",
+      "Successfully completed the Higher Secondary Certificate (HSC) in Science from Rangpur Government City College. Developed a foundation in scientific reasoning, analytical thinking, logical problem-solving, and quantitative concepts. This academic background strengthened my ability to approach complex problems systematically and motivated my continued interest in technology, programming, and software development.",
   },
 ];
 

@@ -37,15 +37,6 @@ const frontend = [
     name: "Redux",
     icon: "redux",
   },
-
-  {
-    name: "Git",
-    icon: "git",
-  },
-  {
-    name: "GitHub",
-    icon: "github",
-  },
   {
     name: "Figma",
     icon: "figma",
@@ -74,6 +65,14 @@ const backend = [
     icon: "prisma",
   },
   {
+    name: "Git",
+    icon: "git",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+  },
+  {
     name: "Postman",
     icon: "postman",
   },
@@ -84,7 +83,7 @@ const backend = [
   {
     name: "VS Code",
     icon: "vscode",
-  }
+  },
 ];
 
 

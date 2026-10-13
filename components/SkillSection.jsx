@@ -32,7 +32,7 @@ export default function SkillsSection() {
         "TypeScript",
         "Tailwind CSS",
         "Hero UI",
-        "Shadcn UI",
+        "Shadcn",
         "React",
         "Next.js",
       ],
