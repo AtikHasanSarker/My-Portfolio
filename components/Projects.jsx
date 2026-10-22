@@ -119,6 +119,7 @@ export default function Projects() {
                   width={600}
                   height={500}
                   src={project.image}
+                  loading="lazy"
                   alt={project.name}
                   className="w-full h-65 object-cover transition duration-500 group-hover:scale-110"
                 />
