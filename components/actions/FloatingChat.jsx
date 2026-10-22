@@ -1,14 +1,14 @@
 import { FaWhatsapp, FaFacebookMessenger } from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "8801768626650";
-const MESSENGER_USERNAME = "atiksagor24.50.80";
+const MESSENGER_ID = "100050639408995";
 
 export default function FloatingChat() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     "Hello Atik! I visited your portfolio and would like to connect with you.",
   )}`;
 
-  const messengerLink = `https://m.me/${MESSENGER_USERNAME}`;
+  const messengerLink = `https://www.facebook.com/messages/t/${MESSENGER_ID}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
