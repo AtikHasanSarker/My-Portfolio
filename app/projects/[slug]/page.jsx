@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
+import { ExternalLink, CheckCircle } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { projects, getProjectBySlug } from "@/data/projects";
 import BackButton from "@/components/actions/BackButton";
@@ -166,7 +166,7 @@ export default async function ProjectDetailPage({ params }) {
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-4 mb-10">
-          <a
+          <Link
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -174,10 +174,10 @@ export default async function ProjectDetailPage({ params }) {
           >
             <ExternalLink size={18} />
             Live Preview
-          </a>
+          </Link>
 
           {project.github !== "#" && (
-            <a
+            <Link
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -185,7 +185,7 @@ export default async function ProjectDetailPage({ params }) {
             >
               <SiGithub size={18} />
               GitHub Repository
-            </a>
+            </Link>
           )}
         </div>
 
