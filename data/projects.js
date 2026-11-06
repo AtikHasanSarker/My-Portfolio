@@ -42,8 +42,8 @@ export const projects = [
     slug: "unitech",
     name: "UniTech",
     image: "/assets/Projects/unitech.png",
-    link: "YOUR_UNITECH_WEBSITE_URL",
-    github: "YOUR_GITHUB_REPOSITORY_URL",
+    link: "https://unitech24.vercel.app",
+    github: "https://github.com/AtikHasanSarker/unitech-client",
     category: ["Full Stack", "E-commerce"],
     badge: "Full Stack Project",
     description:

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -30,9 +30,9 @@ const cards = [
   {
     icon: <IoLogoWhatsapp className="w-10 h-10" />,
     title: "WhatsApp Me",
-    label: "+880 1521-791091",
-    href: "https://wa.me/8801521791091",
-    ariaLabel: "Message on WhatsApp +880 1521-791091",
+    label: "+880 1768-626650",
+    href: "https://wa.me/8801768626650",
+    ariaLabel: "Message on WhatsApp +880 1768-626650",
     buttonText: "WhatsApp Me",
   },
 ];
@@ -295,7 +295,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSending}
-                className="theme-button inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60"
+                className="theme-button cursor-pointer inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSending ? "Sending..." : "Send Message"}
               </button>
